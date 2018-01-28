@@ -56,5 +56,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AuthModelWcf\AuthModelWcf.csproj">
+      <Project>{6525a584-19b5-46ec-ab48-dbfa71be32ab}</Project>
+      <Name>AuthModelWcf</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
