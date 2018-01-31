@@ -1,5 +1,3 @@
-using AuthModelWcf;
-
 namespace AuthModel
 {
     using System;

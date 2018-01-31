@@ -5,39 +5,34 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using ActsModel;
+using AuthModel;
 
 namespace DzoAuthService
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IAuthService" in both code and config file together.
+    // PLACSIN
+    // проверки требований
+    // надежность программногоо обеспечения майерс
+    // виды обслуживания, персонал
+    // требования к программной документации таблица из 3 граф название очем читатель(кто)
+    // технико эконом харки: ориентировачная эконом эфф проги
+    // предлагаемая годовая потребность
+    // стадии и этапы разработки
+    // в плане стопроц события
+    // порядок контроля
     [ServiceContract]
     public interface IAuthService
     {
         [OperationContract]
-        bool Authenticate(string login, string password);
+        Token Authenticate(string login, string password);
 
-        // TODO: Add your service operations here
-    }
+        [OperationContract]
+        List<Act> GetActs(Token token);
 
+        [OperationContract]
+        bool DeleteAct(Act act, Token token);
 
-    // Use a data contract as illustrated in the sample below to add composite types to service operations.
-    [DataContract]
-    public class CompositeType
-    {
-        bool boolValue = true;
-        string stringValue = "Hello ";
-
-        [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
-
-        [DataMember]
-        public string StringValue
-        {
-            get { return stringValue; }
-            set { stringValue = value; }
-        }
+        [OperationContract]
+        bool AddAct(Act act, Token token);
     }
 }
