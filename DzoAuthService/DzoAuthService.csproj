@@ -101,10 +101,6 @@
       <Project>{146fe88e-7e14-4681-9a05-4884de7d1aab}</Project>
       <Name>ActsModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AuthModel\AuthModel.csproj">
-      <Project>{75d6ecf1-0fc9-4a74-acac-10dbb6781228}</Project>
-      <Name>AuthModel</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

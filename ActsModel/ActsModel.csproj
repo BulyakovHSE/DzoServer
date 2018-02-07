@@ -67,9 +67,14 @@
     <Compile Include="Migrations\201801311731359_hashcode.Designer.cs">
       <DependentUpon>201801311731359_hashcode.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802070741372_addedUser.cs" />
+    <Compile Include="Migrations\201802070741372_addedUser.Designer.cs">
+      <DependentUpon>201802070741372_addedUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Region.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -84,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801311731359_hashcode.resx">
       <DependentUpon>201801311731359_hashcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802070741372_addedUser.resx">
+      <DependentUpon>201802070741372_addedUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

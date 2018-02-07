@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using ActsModel;
 
-namespace AuthModel
+namespace ActsModel
 {
     public class User
     {

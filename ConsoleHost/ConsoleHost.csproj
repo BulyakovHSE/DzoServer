@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleFuncs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -64,9 +65,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AuthModel\AuthModel.csproj">
-      <Project>{75d6ecf1-0fc9-4a74-acac-10dbb6781228}</Project>
-      <Name>AuthModel</Name>
+    <ProjectReference Include="..\ActsModel\ActsModel.csproj">
+      <Project>{146fe88e-7e14-4681-9a05-4884de7d1aab}</Project>
+      <Name>ActsModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\DzoAuthService\DzoAuthService.csproj">
       <Project>{de8eafdc-a86d-4e8c-bc69-ffa1670c60e1}</Project>

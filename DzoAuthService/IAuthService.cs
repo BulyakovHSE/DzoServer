@@ -6,7 +6,6 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using ActsModel;
-using AuthModel;
 
 namespace DzoAuthService
 {
@@ -27,7 +26,7 @@ namespace DzoAuthService
         Token Authenticate(string login, string password);
 
         [OperationContract]
-        List<Act> GetActs(Token token);
+        List<Act> GetActs(Token token, int count, int offset);
 
         [OperationContract]
         bool DeleteAct(Act act, Token token);

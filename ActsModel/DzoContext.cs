@@ -15,8 +15,13 @@ namespace ActsModel
         public DzoContext()
             : base("name=DzoContext")
         {
+            if (Users.Count(x => x.Login == "admin") != 0) return;
+            Users.Add(new User {Login = "admin", Password = "admin", Region = Region.All});
+            SaveChanges();
         }
 
         public DbSet<Act> Acts { get; set; }
+
+        public DbSet<User> Users { get; set; }
     }
 }

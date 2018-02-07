@@ -7,7 +7,6 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using ActsModel;
-using AuthModel;
 
 namespace DzoAuthService
 {
@@ -17,7 +16,7 @@ namespace DzoAuthService
 
         public Token Authenticate(string login, string password)
         {
-            using (var db = new UsersDataModel())
+            using (var db = new DzoContext())
             {
                 var users = db.Users.Where(x => x.Login == login);
                 var authenticated = users.Count() == 1 && users.First().Password == password;
@@ -26,13 +25,13 @@ namespace DzoAuthService
             }
         }
 
-        public List<Act> GetActs(Token token)
+        public List<Act> GetActs(Token token, int count, int offset)
         {
             if (!Token.Exists(token)) return null;
             using (var db = new DzoContext())
             {
-                if (token.UserRegion == Region.All) return db.Acts.ToList();
-                return db.Acts.Where(x => x.CreatorRegion == token.UserRegion).ToList();
+                if (token.UserRegion == Region.All) return db.Acts.OrderBy(x=>x.Id).Skip(offset).Take(count).ToList();
+                return db.Acts.Where(x => x.CreatorRegion == token.UserRegion).OrderBy(x=>x.Id).Skip(offset).Take(count).ToList();
             }
         }
 
@@ -79,6 +78,35 @@ namespace DzoAuthService
                 {
                     return false;
                 }
+            }
+        }
+
+        public bool AddUser(string adminPassword, User user)
+        {
+            try
+            {
+                using (var db = new DzoContext())
+                {
+                    if (db.Users.First(x => x.Login == "admin").Password == adminPassword)
+                    {
+                        if (!db.Users.Any(x => x.Login == user.Login))
+                        {
+                            db.Users.Add(user);
+                            db.SaveChanges();
+                            return true;
+                        }
+
+                        Console.WriteLine("This user already exists!");
+                    }
+                    else Console.WriteLine("Password is incorrect!");
+
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+                return false;
             }
         }
     }
