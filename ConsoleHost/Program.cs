@@ -19,6 +19,7 @@ namespace ConsoleHost
                     {
                         using (var host = new ServiceHost(typeof(AuthService)))
                         {
+                            Token.DeleteExpiredTokens();
                             host.Open();
                             Console.WriteLine("host opened");
                             Console.ReadLine();

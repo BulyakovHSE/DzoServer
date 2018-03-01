@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DzoAuthService", "DzoAuthService\DzoAuthService.csproj", "{DE8EAFDC-A86D-4E8C-BC69-FFA1670C60E1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleHost", "ConsoleHost\ConsoleHost.csproj", "{830801F7-ADC4-43DD-A3B2-A1D5716EE98A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActsModel", "ActsModel\ActsModel.csproj", "{146FE88E-7E14-4681-9A05-4884DE7D1AAB}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AzureDzoService", "AzureDzoService\AzureDzoService.ccproj", "{9704F01E-E13E-4CB8-842B-624FCF4FF80F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDzoServiceRole", "AzureDzoServiceRole\AzureDzoServiceRole.csproj", "{8177BC57-D1A9-4137-936C-558F00FCB069}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DzoAuthService", "DzoAuthService\DzoAuthService.csproj", "{DE8EAFDC-A86D-4E8C-BC69-FFA1670C60E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DE8EAFDC-A86D-4E8C-BC69-FFA1670C60E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DE8EAFDC-A86D-4E8C-BC69-FFA1670C60E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DE8EAFDC-A86D-4E8C-BC69-FFA1670C60E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DE8EAFDC-A86D-4E8C-BC69-FFA1670C60E1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{830801F7-ADC4-43DD-A3B2-A1D5716EE98A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{830801F7-ADC4-43DD-A3B2-A1D5716EE98A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{830801F7-ADC4-43DD-A3B2-A1D5716EE98A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +27,18 @@ Global
 		{146FE88E-7E14-4681-9A05-4884DE7D1AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{146FE88E-7E14-4681-9A05-4884DE7D1AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{146FE88E-7E14-4681-9A05-4884DE7D1AAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9704F01E-E13E-4CB8-842B-624FCF4FF80F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9704F01E-E13E-4CB8-842B-624FCF4FF80F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9704F01E-E13E-4CB8-842B-624FCF4FF80F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9704F01E-E13E-4CB8-842B-624FCF4FF80F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8177BC57-D1A9-4137-936C-558F00FCB069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8177BC57-D1A9-4137-936C-558F00FCB069}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8177BC57-D1A9-4137-936C-558F00FCB069}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8177BC57-D1A9-4137-936C-558F00FCB069}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE8EAFDC-A86D-4E8C-BC69-FFA1670C60E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE8EAFDC-A86D-4E8C-BC69-FFA1670C60E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE8EAFDC-A86D-4E8C-BC69-FFA1670C60E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE8EAFDC-A86D-4E8C-BC69-FFA1670C60E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
