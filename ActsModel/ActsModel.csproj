@@ -72,6 +72,9 @@
       <DependentUpon>201802070741372_addedUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\ActBase.cs" />
+    <Compile Include="Model\ActCommon.cs" />
+    <Compile Include="Model\ActIndividual.cs" />
     <Compile Include="Model\ActInpectation_FL.cs" />
     <Compile Include="Model\ActInspectation_UL_IP.cs" />
     <Compile Include="Model\ActInspection.cs" />
