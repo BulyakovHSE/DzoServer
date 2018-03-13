@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDzoServiceRole", "Azur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DzoAuthService", "DzoAuthService\DzoAuthService.csproj", "{DE8EAFDC-A86D-4E8C-BC69-FFA1670C60E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FINAL_VERSION", "..\..\..\OneDrive\Рабочий стол\Новая папка (2)\FINAL_VERSION\FINAL_VERSION.csproj", "{0B7F27E2-AFF7-4C37-8AD4-050C0ED3A5B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DE8EAFDC-A86D-4E8C-BC69-FFA1670C60E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE8EAFDC-A86D-4E8C-BC69-FFA1670C60E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE8EAFDC-A86D-4E8C-BC69-FFA1670C60E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B7F27E2-AFF7-4C37-8AD4-050C0ED3A5B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B7F27E2-AFF7-4C37-8AD4-050C0ED3A5B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B7F27E2-AFF7-4C37-8AD4-050C0ED3A5B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B7F27E2-AFF7-4C37-8AD4-050C0ED3A5B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

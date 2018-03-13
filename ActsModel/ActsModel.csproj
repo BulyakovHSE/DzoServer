@@ -72,6 +72,18 @@
       <DependentUpon>201802070741372_addedUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\ActInpectation_FL.cs" />
+    <Compile Include="Model\ActInspectation_UL_IP.cs" />
+    <Compile Include="Model\ActInspection.cs" />
+    <Compile Include="Model\AgreementStatement.cs" />
+    <Compile Include="Model\AreaMeasurement.cs" />
+    <Compile Include="Model\CheckingJournal.cs" />
+    <Compile Include="Model\CitizensCheckPlan.cs" />
+    <Compile Include="Model\Order_Inspection_UL_IP.cs" />
+    <Compile Include="Model\Photo.cs" />
+    <Compile Include="Model\PhotoTable.cs" />
+    <Compile Include="Model\Protocol.cs" />
+    <Compile Include="Model\Regulation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Region.cs" />
     <Compile Include="User.cs" />
