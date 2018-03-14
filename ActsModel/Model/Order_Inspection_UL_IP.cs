@@ -13,13 +13,15 @@ namespace ActsModel.Model
         /// Наименование территориального органа администрации Перми, уполномоченного 
         /// на осуществеление муницип. зем. ко
         /// </summary>
-        public string TerritorialBodyName;
+        [DataMember]
+        public string TerritorialBodyName { get; set; }
 
         /// <summary>
         /// о проведении .. проверки
         /// (плановой/внеплановой, документарной/выездной)
         /// </summary>
-        public string CheckType;
+        [DataMember]
+        public string CheckType { get; set; }
 
         // от 
         // от “___” _____  _____ г.
@@ -27,25 +29,29 @@ namespace ActsModel.Model
         /// <summary>
         /// Номер приказа
         /// </summary>
-        public string OrderNum;
+        [DataMember]
+        public string OrderNum { get; set; }
 
         /// <summary>
         /// Провести проверку в отношении: 
         /// (наименование юридического лица, фамилия, имя, отчество (последнее – при наличии) индивидуального предпринимателя)
         /// </summary>
-        public string InspectionTarget;
+        [DataMember]
+        public string InspectionTarget { get; set; }
 
         /// <summary>
         /// Место нахождения: 
         /// (юридического лица (филиалов, представительств, обособленных структурных подразделений), места фактического осуществления деятельности индивидуальным предпринимателем и (или) используемых ими производственных объектов)
         /// </summary>
-        public string TargetPlace;
+        [DataMember]
+        public string TargetPlace { get; set; }
 
         /// <summary>
         /// Назначить лицом(ами), уполномоченным(и) на проведение проверки: 
         /// (фамилия, имя, отчество (последнее – при наличии), должность должностного лица (должностных лиц), уполномоченного(ых) на проведение проверки)
         /// </summary>
-        public string CheckerInfo;
+        [DataMember]
+        public string CheckerInfo { get; set; }
 
         /// <summary>
         /// Привлечь к проведению проверки в качестве экспертов, представителей экспертных организаций следующих лиц: 
@@ -53,48 +59,57 @@ namespace ActsModel.Model
         /// экспертов и(или) наименование экспертной организации с указанием реквизитов свидетельства
         /// об аккредитации и наименования органа по аккредитации, выдавшего свидетельство об аккредитации)
         /// </summary>
-        public string ExpertsInfo;
+        [DataMember]
+        public string ExpertsInfo { get; set; }
 
         /// <summary>
         ///  Настоящая проверка проводится в рамках: 
         /// (наименование вида (видов) государственного контроля (надзора), муниципального контроля, реестровый(ые) номер(а) функции(й) в федеральной государственной информационной системе “Федеральный реестр государственных и муниципальных услуг (функций)”
         /// </summary>
-        public string CheckingScopes;
+        [DataMember]
+        public string CheckingScopes { get; set; }
 
         ///<summary>
         /// Установить, что: настоящая проверка проводится с целью: 
         /// </summary> 
-        public string CheckingAim;
+        [DataMember]
+        public string CheckingAim { get; set; }
 
         /// <summary>
         /// задачами настоящей проверки являются:
         /// </summary>
-        public string CheckingTasks;
+        [DataMember]
+        public string CheckingTasks { get; set; }
 
         ///<summary>
         /// Срок проведения проверки:
         /// </summary>  
-        public string CheckingDuration;
+        [DataMember]
+        public string CheckingDuration { get; set; }
 
         /// <summary>
         /// К проведению проверки приступить с “__” ______ 20__ года.
         /// </summary>
-        public DateTime? CheckingTimeStart;
+        [DataMember]
+        public DateTime? CheckingTimeStart { get; set; }
 
         /// <summary>
         /// Проверку окончить не позднее “__” ______ 20__ года.
         /// </summary>
-        public DateTime? CheckingTimeFinish;
+        [DataMember]
+        public DateTime? CheckingTimeFinish { get; set; }
 
         /// <summary>
         /// Правовые основания проведения проверки: ссылка на положения нормативного правового акта, в соответствии с которым осуществляется проверка
         /// </summary>
-        public string RightCheckingBases;
+        [DataMember]
+        public string RightCheckingBases { get; set; }
 
         /// <summary>
         /// Обязательные требования и (или) требования, установленные муниципальными правовыми актами, подлежащие проверке
         /// </summary>
-        public string MandatoryRequirements;
+        [DataMember]
+        public string MandatoryRequirements { get; set; }
 
         /// <summary>
         /// В процессе проверки провести следующие мероприятия по контролю, 
@@ -102,26 +117,30 @@ namespace ActsModel.Model
         /// (с указанием наименования мероприятия по контролю и сроков его проведения):
         /// 3 строки под номерами
         /// </summary>
-        public string CheckingEvents;
+        [DataMember]
+        public string CheckingEvents { get; set; }
 
         /// <summary>
         /// Перечень положений об осуществлении государственного контроля (надзора) и муниципального контроля, 
         /// административных регламентов по осуществлению государственного контроля (надзора), осуществлению муниципального контроля (при их наличии):
         /// (с указанием наименований, номеров и дат их принятия)
         /// </summary>
-        public string ProvisionsListOfStateControl;
+        [DataMember]
+        public string ProvisionsListOfStateControl { get; set; }
 
         /// <summary>
         /// Перечень документов, представление которых юридическим лицом, индивидуальным предпринимателем необходимо для достижения целей и задач проведения проверки:
         /// (должность, фамилия, инициалы руководителя, заместителя руководителя органа государственного 
         /// контроля (надзора), органа муниципального контроля, издавшего распоряжение или приказ о проведении проверки)
         /// </summary>
-        public string DocumentsForSuccess;
+        [DataMember]
+        public string DocumentsForSuccess { get; set; }
 
         /// <summary>
         /// фамилия, имя, отчество (последнее – при наличии) и должность должностного лица, непосредственно 
         /// подготовившего проект распоряжения (приказа), контактный телефон, электронный адрес (при наличии)
         /// </summary>
-        public string OrderCreatorInfo;
+        [DataMember]
+        public string OrderCreatorInfo { get; set; }
     }
 }

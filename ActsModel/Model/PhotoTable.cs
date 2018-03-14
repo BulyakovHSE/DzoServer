@@ -13,43 +13,51 @@ namespace ActsModel.Model
         /// <summary>
         /// наименование органа муниципального земельного контроля
         /// </summary>
-        public string MunitipalControlName;
+        [DataMember]
+        public string MunitipalControlName { get; set; }
 
         /// <summary>
         /// приложение к акту проверки от ... 
         /// "___" ________ 20__ г. 
         /// </summary>
-        public DateTime? AdditionToActDate;
+        [DataMember]
+        public DateTime? AdditionToActDate { get; set; }
 
         /// <summary>
         /// Номер акта проверки
         /// </summary>
-        public string ActNum;
+        [DataMember]
+        public string ActNum { get; set; }
 
         /// <summary>
         /// наименование юридического лица, Ф.И.О. должностного лица, индивидуального предпринимателя, Ф.И.О.гражданина
         /// </summary>
-        public string PersonsInfo;
+        [DataMember]
+        public string PersonsInfo { get; set; }
 
         /// <summary>
         /// кадастровый номер земельного участка, его площадь, вид разрешенног использования, местоположение земельного участка
         /// </summary>
-        public string AreaInfo;
+        [DataMember]
+        public string AreaInfo { get; set; }
 
         /// <summary>
         /// Фотографирование производилось: указывается марка, идентификационны параметры фотоаппарата
         /// </summary>
-        public string DeviceInfo;
+        [DataMember]
+        public string DeviceInfo { get; set; }
 
         /// <summary>
         /// (Ф.И.О. должностного лица, составившего фототаблицу)
         /// </summary>
-        public string PhototableCreator;
+        [DataMember]
+        public string PhototableCreator { get; set; }
 
         /// <summary>
         /// Снимки
         /// (Номер снимка - Краткое описание (адрес, по которому проводилось фотографирование)
         /// </summary>
-        public List<Photo> Photos;
+        [DataMember]
+        public List<Photo> Photos { get; set; }
     }
 }

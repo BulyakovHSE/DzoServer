@@ -13,46 +13,54 @@ namespace ActsModel.Model
         /// ПРЕДПИСАНИЕ об устранении нарушения земельного законодательства от
         /// "___" ____________ 20___ г.
         /// </summary>
-        public DateTime? Date;
+        [DataMember]
+        public DateTime? Date { get; set; }
 
         /// <summary>
         /// Номер предписания
         /// </summary>
-        public string Num;
+        [DataMember]
+        public string Num { get; set; }
 
         /// <summary>
         /// (должность, Ф.И.О. должностного лица, составившего предписание)
         /// </summary>
-        public string CreatorInfo;
+        [DataMember]
+        public string CreatorInfo { get; set; }
 
         /// <summary>
         /// в  порядке осуществления муниципального земельного контроля провел проверку соблюдения 
         /// земельного законодательства на земельном участке, расположенном по адресу:
         /// </summary>
-        public string AreaAddress;
+        [DataMember]
+        public string AreaAddress { get; set; }
 
         /// <summary>
         /// Площадью (без кв.м)
         /// </summary>
-        public string AreaSquare;
+        [DataMember]
+        public string AreaSquare { get; set; }
 
         /// <summary>
         /// Земельный участок используется (наименование юридического лица, руководитель, ИНН, юридический адрес, 
         /// банковские реквизиты, телефоны; Ф.И.О. должностного лица или гражданина, ИНН, паспортные данные, адрес места жительства, телефон)
         /// </summary>
-        public string AreaUserInfo;
+        [DataMember]
+        public string AreaUserInfo { get; set; }
 
         /// <summary>
         /// В  результате  проверки  выявлено нарушение земельного законодательства Российской Федерации, выразившееся в:
         /// (описание нарушения)
         /// </summary>
-        public string ViolationDescription;
+        [DataMember]
+        public string ViolationDescription { get; set; }
 
         /// <summary>
         /// Указанное нарушение допущено: 
         /// наименование юридического лица, должностного лица,индивидуального предпринимателя, физического лица
         /// </summary>
-        public string ViolationAuthorInfo;
+        [DataMember]
+        public string ViolationAuthorInfo { get; set; }
 
         // Я
         // (должность, Ф.И.О.)
@@ -66,7 +74,8 @@ namespace ActsModel.Model
         /// устранить допущенное нарушение до
         /// "___" ____________ 20___ г.
         /// </summary>
-        public DateTime? CorrectToDate;
+        [DataMember]
+        public DateTime? CorrectToDate { get; set; }
 
         /// <summary>
         /// Информацию   об   исполнении   предписания  с  приложением  документов,
@@ -76,17 +85,20 @@ namespace ActsModel.Model
         /// документами и другими материалами, представлять в 
         /// (наименование органа муниципального земельного контроля)
         /// </summary>
-        public string MunicipalAuthorityForDocuments;
+        [DataMember]
+        public string MunicipalAuthorityForDocuments { get; set; }
 
         /// <summary>
         /// по адресу:
         /// </summary>
-        public string MunicipalAuthorityAddress;
+        [DataMember]
+        public string MunicipalAuthorityAddress { get; set; }
 
         /// <summary>
         /// !!!ПОД ВОПРОСОМ. НЕ ЗНАЮ КАК ВЫГЛЯДИТ ОТМЕТКА!!!
         /// (отметка о вручении предписания)
         /// </summary>
-        public string PrescriptionDeliveryMark;
+        [DataMember]
+        public string PrescriptionDeliveryMark { get; set; }
     }
 }

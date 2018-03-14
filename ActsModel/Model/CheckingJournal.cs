@@ -12,20 +12,23 @@ namespace ActsModel.Model
         /// <summary>
         ///  дата начала ведения журнала
         /// </summary>
-        public string JournalStartDate;
+        [DataMember]
+        public string JournalStartDate { get; set; }
 
         /// <summary>
         /// наименование юридического лица/фамилия, имя,
         /// индивидуального предпринимателя
         /// </summary>
-        public string PersonInfo;
+        [DataMember]
+        public string PersonInfo { get; set; }
 
         /// <summary>
         ///  адрес (место нахождения) постоянно действующего исполнительного органа 
         /// юридического лица/место жительства (место осуществления деятельности 
         /// (если не совпадает с местом жительства) индивидуального предпринимателя)
         /// </summary>
-        public string Address;
+        [DataMember]
+        public string Address { get; set; }
 
         /// <summary>
         /// (государственный регистрационный номер записи о государственной регистрации юридического лица/индивидуального предпринимателя, 
@@ -33,45 +36,53 @@ namespace ActsModel.Model
         /// номер реестровой записи и дата включения сведений в реестр субъектов малого или среднего предпринимательства 
         /// для субъектов малого и среднего предпринимательства
         /// </summary>
-        public string DifferentInfo;
+        [DataMember]
+        public string DifferentInfo { get; set; }
 
         /// <summary>
         /// Ответственное лицо:
         /// (фамилия, имя, отчество (в случае, если имеется), должность лица (лиц), ответственного
         /// за ведение журнала учета проверок)
         /// </summary>
-        public string ResponsiblePersonInfo;
+        [DataMember]
+        public string ResponsiblePersonInfo { get; set; }
 
         /// <summary>
         /// (фамилия, имя, отчество (в случае, если имеется) руководителя юридического лица, индивидуального предпринимателя)
         /// </summary>
-        public string ResponsiblePersonBossInfo;
+        [DataMember]
+        public string ResponsiblePersonBossInfo { get; set; }
 
         /// <summary>
         ///  Дата начала и окончания проверки
         /// </summary>
-        public string CheckDateStartAndFinish;
+        [DataMember]
+        public string CheckDateStartAndFinish { get; set; }
 
         /// <summary>
         /// Общее время проведения проверки 
         /// (в отношении субъектов малого предпринимательства и микропредприятий указывается в часах)
         /// </summary>
-        public string CommonCheckDuration;
+        [DataMember]
+        public string CommonCheckDuration { get; set; }
 
         /// <summary>
         /// Наименование органа государственного контроля (надзора), наименование органа муниципального контроля
         /// </summary>
-        public string StateControlName;
+        [DataMember]
+        public string StateControlName { get; set; }
 
         /// <summary>
         /// Дата и номер распоряжения или приказа о проведении проверки
         /// </summary>
-        public string DateNumOrOrderOfCheck;
+        [DataMember]
+        public string DateNumOrOrderOfCheck { get; set; }
 
         /// <summary>
         /// Цель, задачи и предмет проверки
         /// </summary>
-        public string CheckAimTaskAndObject;
+        [DataMember]
+        public string CheckAimTaskAndObject { get; set; }
 
         /// <summary>
         /// Вид проверки (плановая или внеплановая):
@@ -80,29 +91,34 @@ namespace ActsModel.Model
         /// в отношении внеплановой выездной проверки:
         /// – с указанием на дату и номер решения прокурора о согласовании проведения проверки(в случае, если такое согласование необходимо)
         /// </summary>
-        public string CheckType;
+        [DataMember]
+        public string CheckType { get; set; }
 
         /// <summary>
         /// Дата и номер акта, составленного по результатам проверки, 
         /// дата его вручения представителю юридического лица, индивидуальному предпринимателю
         /// </summary>
-        public string DateNumOfCheckRes;
+        [DataMember]
+        public string DateNumOfCheckRes { get; set; }
 
         /// <summary>
         /// Выявленные нарушения обязательных требований 
         /// (указываются содержание выявленного нарушения со ссылкой на положение нормативного правового акта, 
         /// которым установлено нарушенное требование, допустившее его лицо)
         /// </summary>
-        public string FoundViolations;
+        [DataMember]
+        public string FoundViolations { get; set; }
 
         /// <summary>
         /// Дата, номер и содержание выданного предписания об устранении выявленных нарушений
         /// </summary>
-        public string DateNumOfContentOfElimination;
+        [DataMember]
+        public string DateNumOfContentOfElimination { get; set; }
 
         /// <summary>
         /// Фамилия, имя, отчество (в случае, если имеется), должность должностного лица (должностных лиц), проводящего(их) проверку
         /// </summary>
-        public string CheckerPersonInfo;
+        [DataMember]
+        public string CheckerPersonInfo { get; set; }
     }
 }

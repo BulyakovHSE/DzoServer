@@ -12,108 +12,128 @@ namespace ActsModel.Model
         /// <summary>
         /// Номер акта
         /// </summary>
-        public string ActNum;
+        
+        [DataMember]
+        public string ActNum { get; set; }
 
         /// <summary>
         /// Дата составления акта
         /// “__”	____ 20__г
         /// </summary>
-        public DateTime? DateTimeCreation;
+        [DataMember]
+        public DateTime? DateTimeCreation { get; set; }
 
         /// <summary>
         /// Место составления
         /// </summary>
-        public string PlaceActCreation;
+        [DataMember]
+        public string PlaceActCreation { get; set; }
 
         /// <summary>
         /// (должность, Ф.И.О. должностного лица,составившего акт)
         /// </summary>
-        public string ActCreator;
+        [DataMember]
+        public string ActCreator { get; set; }
 
         /// <summary>
         ///  на  основании  распоряжения 
         /// (наименование должности руководителя органа муниципального земельного контроля
         /// </summary>
-        public string BaseOnOrder;
+        [DataMember]
+        public string BaseOnOrder { get; set; }
 
         /// <summary>
         ///  от 
         /// “__”	____ 20__г
         /// </summary>
-        public DateTime? BaseOnOrderDate;
+        [DataMember]
+        public DateTime? BaseOnOrderDate { get; set; }
 
         /// <summary>
         /// Номер распоряжения?
         /// </summary>
-        public string OrderNum;
+        [DataMember]
+        public string OrderNum { get; set; }
 
         /// <summary>
         /// в присутствии: 
         /// (Ф.И.О. проверяемого лица, законного представителя)
         /// </summary>
-        public string AttendingPersonsInfo;
+        [DataMember]
+        public string AttendingPersonsInfo { get; set; }
 
         /// <summary>
         /// проведена ... проверка
         /// (плановая/внеплановая, документарная/выездная)
         /// </summary>
-        public string CheckType;
+        [DataMember]
+        public string CheckType { get; set; }
 
         /// <summary>
         /// по адресу
         /// </summary>
-        public string AreaAddress;
+        [DataMember]
+        public string AreaAddress { get; set; }
 
         /// <summary>
         /// площадью ... кв.м
         /// </summary>
-        public string AreaSquare;
+        [DataMember]
+        public string AreaSquare { get; set; }
 
         /// <summary>
         /// Используемом 
         /// (Ф.И.О., ИНН, адрес места жительства, паспортные данные)
         /// </summary>
-        public string UserInfo;
+        [DataMember]
+        public string UserInfo { get; set; }
 
         /// <summary>
         /// Проверка проводилась с 
         /// “__”	____ 20__г
         /// </summary>
-        public DateTime? CheckDateStart;
+        [DataMember]
+        public DateTime? CheckDateStart { get; set; }
 
         /// <summary>
         /// до
         /// “__”	____ 20__г
         /// </summary>
-        public DateTime? CheckDateFinish;
+        [DataMember]
+        public DateTime? CheckDateFinish { get; set; }
 
         /// <summary>
         /// Проверкой установлено: 
         /// (описание территории, строений, сооружений, ограждения, межевых знаков и т.д.)
         /// </summary>
-        public string CheckResults;
+        [DataMember]
+        public string CheckResults { get; set; }
 
         /// <summary>
         /// Объяснения,   заявления  проверяемого  лица  (законного  представителя)  по
         /// результатам проведенной проверки соблюдения земельного законодательства:
         /// </summary>
-        public string InspectedPersonInfo;
+        [DataMember]
+        public string InspectedPersonInfo { get; set; }
 
         /// <summary>
         /// От  участников проверки поступили (не поступили) заявления:
         /// (содержание заявления)
         /// </summary>
-        public string ApplicationContent;
+        [DataMember]
+        public string ApplicationContent { get; set; }
 
         /// <summary>
         /// В ходе проверки производились: 
         /// (обмер участка, фото-, видеосъемка и т.п.)
         /// </summary>
-        public string DuringCheckActivity;
+        [DataMember]
+        public string DuringCheckActivity { get; set; }
 
         /// <summary>
         /// К акту прилагается: 
         /// </summary>
-        public string AdditionsToAct;
+        [DataMember]
+        public string AdditionsToAct { get; set; }
     }
 }

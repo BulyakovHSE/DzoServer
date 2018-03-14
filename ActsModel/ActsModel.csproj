@@ -79,6 +79,10 @@
     <Compile Include="Migrations\201803141048005_newModel1.Designer.cs">
       <DependentUpon>201803141048005_newModel1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803141248450_modelProps.cs" />
+    <Compile Include="Migrations\201803141248450_modelProps.Designer.cs">
+      <DependentUpon>201803141248450_modelProps.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\ActBase.cs" />
     <Compile Include="Model\ActCommon.cs" />
@@ -121,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803141048005_newModel1.resx">
       <DependentUpon>201803141048005_newModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803141248450_modelProps.resx">
+      <DependentUpon>201803141248450_modelProps.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

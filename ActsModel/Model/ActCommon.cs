@@ -6,6 +6,7 @@ namespace ActsModel.Model
     [DataContract]
     public class ActCommon : ActBase
     {
+        [DataMember]
         public int CommonNum { get; set; }
     }
 }

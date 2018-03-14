@@ -176,6 +176,23 @@ namespace DzoAuthService
             }
         }
 
+        public List<Photo> GetPhotoTablePhotos(Token token, PhotoTable photoTable)
+        {
+            if (!Token.Exists(token)) return null;
+            try
+            {
+                using (var db = new DzoContext())
+                {
+                    //return db.PhotoTables.Where(x=>x.Id == photoTable.Id)
+                    return null;
+                }
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
 
         public bool DeleteAct(ActBase act, Token token)
         {
@@ -208,6 +225,8 @@ namespace DzoAuthService
 
         public bool AddAct(ActBase act, Token token)
         {
+            if (!Token.Exists(token)) return false;
+            act.Region = token.UserRegion;
             var type = act.GetType();
             try
             {

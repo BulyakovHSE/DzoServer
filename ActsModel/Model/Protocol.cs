@@ -13,34 +13,40 @@ namespace ActsModel.Model
         /// "___" ____________ 20___ г. 
         ///"___" час. "___" мин.
         /// </summary>
-        public DateTime? Date;
+        [DataMember]
+        public DateTime? Date { get; set; }
 
         /// <summary>
         /// N ____________
         /// </summary>
-        public string Num;
+        [DataMember]
+        public string Num { get; set; }
 
         /// <summary>
         /// Место составления
-        /// </summary> 
-        public string CreationPlace;
+        /// </summary>
+        [DataMember] 
+        public string CreationPlace { get; set; }
 
         /// <summary>
         /// (должность, Ф.И.О. должностного лица, составившего протокол)
         /// </summary>
-        public string ActCreatorInfo;
+        [DataMember]
+        public string ActCreatorInfo { get; set; }
 
         /// <summary>
         /// в присутсвии 
         /// (должность, наименование юридического лица, должностногo лица, Ф.И.О.законного представителя юридического лица, N доверенности, Ф.И.О. физического лица)
         /// </summary>
-        public string InPresenceOfPersonInfo;
+        [DataMember]
+        public string InPresenceOfPersonInfo { get; set; }
 
         /// <summary>
         /// составил настоящий протокол о нижеследующем: 
         /// (описание нарушения)
         /// </summary>
-        public string ViolationDescription;
+        [DataMember]
+        public string ViolationDescription { get; set; }
 
         /// <summary>
         /// Указанное нарушение допущено:
@@ -48,29 +54,35 @@ namespace ActsModel.Model
         /// адрес, банковские реквизиты, телефоны, Ф.И.О. должностного лица, индивидуального предпринимателя, 
         /// физического лица, ИНН, паспортные данные, адрес регистрации, телефон
         /// </summary>
-        public string ViolationAuthorInfo;
+        [DataMember]
+        public string ViolationAuthorInfo { get; set; }
 
         /// <summary>
         /// Данные действия подпадают под часть __ статьи __ Кодекса Российской Федерации об административных правонарушениях.
         /// </summary>
-        public string CodexSection;
-        public string CodexArticle;
+        [DataMember]
+        public string CodexSection { get; set; }
+        [DataMember]
+        public string CodexArticle { get; set; }
 
         /// <summary>
         /// Объяснения  лица  (физического,  должностного,  законного представителя юридического лица), 
         /// в   отношении которого   составлен протокол  об административном правонарушении:
         /// </summary>
-        public string PersonExplanation;
+        [DataMember]
+        public string PersonExplanation { get; set; }
 
         /// <summary>
         /// Особые отметки:
         /// </summary>
-        public string SpecialMarks;
+        [DataMember]
+        public string SpecialMarks { get; set; }
 
         /// <summary>
         ///  Лицо, составившее протокол
         /// Ф.И.О., телефон
         /// </summary>
-        public string ProtocolCreatorInfo;
+        [DataMember]
+        public string ProtocolCreatorInfo { get; set; }
     }
 }

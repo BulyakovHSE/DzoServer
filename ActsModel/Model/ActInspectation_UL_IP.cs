@@ -13,48 +13,56 @@ namespace ActsModel.Model
         /// Наименование территориального органа администрации Перми, уполномоченного 
         /// на осуществеление муницип. зем. контроля
         /// </summary>
-        public string TerritorialBodyName;
+        [DataMember]
+        public string TerritorialBodyName { get; set; }
 
         /// <summary>
         ///  Место составления
         /// </summary>
-        public string PlaceActCreation;
+        [DataMember]
+        public string PlaceActCreation { get; set; }
 
         /// <summary>
         /// Дата и время составления акта
         /// “__”	____ 20__г.
         /// </summary>
-        public DateTime? DateTimeCreation;
+        [DataMember]
+        public DateTime? DateTimeCreation { get; set; }
 
         /// <summary>
         /// Номер акта проверки
         /// </summary>
-        public string ActNum;
+        [DataMember]
+        public string ActNum { get; set; }
 
         /// <summary>
         /// По адресу/адресам:  
         /// (место проведения проверки)
         /// </summary>
-        public string CheckingPlace;
+        [DataMember]
+        public string CheckingPlace { get; set; }
 
         /// <summary>
         /// На основании:
         /// (вид документа с указанием реквизитов (номер, дата))
         /// </summary>
-        public string OnBaseOfDocs;
+        [DataMember]
+        public string OnBaseOfDocs { get; set; }
 
         /// <summary>
         /// была проведена  
         /// (плановая/внеплановая, документарная/выездная)
         /// </summary>
-        public string CheckType;
+        [DataMember]
+        public string CheckType { get; set; }
 
         /// <summary>
         ///  проверка в отношении:
         /// (наименование юридического лица, фамилия, имя, отчество (последнее – при наличии)
         /// индивидуального предпринимателя)
         /// </summary>
-        public string ChekingTarget;
+        [DataMember]
+        public string ChekingTarget { get; set; }
 
         /// <summary>
         /// Дата и время проведения проверки:
@@ -64,32 +72,37 @@ namespace ActsModel.Model
         /// !!ВИДИМО МОЖЕТ БЫТЬ НЕСКОЛЬКО СТРОК!! ТАКОГО ТИПА
         /// “__” ____ 20__г. с	__час.	__мин. до __час. __мин. Продолжительность __
         /// </summary>
-        public string DateAndTimeOfCheck;
+        [DataMember]
+        public string DateAndTimeOfCheck { get; set; }
 
         /// <summary>
         /// Общая продолжительность проверки:
         /// (рабочих дней/часов)
         /// </summary>
-        public string CommonCheckDuration;
+        [DataMember]
+        public string CommonCheckDuration { get; set; }
 
         /// <summary>
         /// Акт составлен:
         /// (наименование органа государственного контроля (надзора) или органа муниципального контроля)
         /// </summary>
-        public string ActCreatedBy;
+        [DataMember]
+        public string ActCreatedBy { get; set; }
 
         /// <summary>
         /// С копией распоряжения/приказа о проведении проверки ознакомлен(ы): 
         /// (заполняется при проведении выездной проверки)
         /// ((фамилии, инициалы, подпись, дата, время)
         /// </summary>
-        public string FamiliarPersonInfo;
+        [DataMember]
+        public string FamiliarPersonInfo { get; set; }
 
         /// <summary>
         /// Дата и номер решения прокурора (его заместителя) о согласовании проведения проверки:
         /// ((заполняется в случае необходимости согласования проверки с органами прокуратуры)
         /// </summary>
-        public string ProsecutorDecision;
+        [DataMember]
+        public string ProsecutorDecision { get; set; }
 
         /// <summary>
         /// Лицо(а), проводившее проверку:  
@@ -98,7 +111,8 @@ namespace ActsModel.Model
         /// должности экспертов и/или наименования экспертных организаций с указанием реквизитов свидетельства об аккредитации и наименование органа
         /// по аккредитации, выдавшего свидетельство)
         /// </summary>
-        public string CheckersInfo;
+        [DataMember]
+        public string CheckersInfo { get; set; }
 
         /// <summary>
         /// При проведении проверки присутствовали:
@@ -108,7 +122,8 @@ namespace ActsModel.Model
         /// уполномоченного представителя саморегулируемой организации (в случае проведения проверки члена саморегулируемой организации),
         /// присутствовавших при проведении мероприятий по проверке)
         /// </summary>
-        public string BeholdersInfo;
+        [DataMember]
+        public string BeholdersInfo { get; set; }
 
         /// <summary>
         /// В ходе проведения проверки:
@@ -116,29 +131,33 @@ namespace ActsModel.Model
         /// установленных муниципальными правовыми актами с указанием положений (нормативных) правовых актов)
         /// (с указанием характера нарушений; лиц, допустивших нарушения)
         /// </summary>
-        public string RequirementsViolations;
+        [DataMember]
+        public string RequirementsViolations { get; set; }
 
         /// <summary>
         /// выявлены несоответствия сведений, содержащихся в уведомлении о начале осуществления отдельных видов предпринимательской деятельности,
         /// обязательным требованиям (с указанием положений (нормативных) правовых актов):
         /// </summary>
-        public string DiscrepanciesInfo;
+        [DataMember]
+        public string DiscrepanciesInfo { get; set; }
 
         /// <summary>
         /// выявлены факты невыполнения предписаний органов государственного контроля 
         /// (надзора), органов муниципального контроля (с указанием реквизитов выданных предписаний):
         /// </summary>
-        public string NonComplianceFacts;
+        [DataMember]
+        public string NonComplianceFacts { get; set; }
 
         /// <summary>
         /// нарушений не выявлено
         /// </summary>
-        public string NoViolations;
+        [DataMember]
+        public string NoViolations { get; set; }
 
         /// <summary>
         /// Прилагаемые к акту документы:
         /// </summary>
-        public string DocsForAct;
+        public string DocsForAct { get; set; }
 
         /// <summary>
         ///  С актом проверки ознакомлен(а), копию акта со всеми приложениями получил(а):
@@ -146,6 +165,7 @@ namespace ActsModel.Model
         /// или уполномоченного представителя юридического лица, индивидуального предпринимателя,
         /// его уполномоченного представителя)
         /// </summary>
-        public string PersonInfo;
+        [DataMember]
+        public string PersonInfo { get; set; }
     }
 }

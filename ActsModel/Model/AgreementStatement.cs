@@ -17,31 +17,36 @@ namespace ActsModel.Model
         /// государственный регистрационный номер записи о государственной регистрации индивидуального предпринимателя, 
         /// идентификационный номер налогоплательщика)
         /// </summary>
-        public string InspectationTargetInfo;
+        [DataMember]
+        public string InspectationTargetInfo { get; set; }
 
         /// <summary>
         /// осуществляющего предпринимательскую деятельность по адресу
         /// </summary>
-        public string TargetAddress;
+        [DataMember]
+        public string TargetAddress { get; set; }
 
         /// <summary>
         /// Основание проведения проверки:
         /// (ссылка на положение Федерального закона от 26 декабря 2008 г. № 294-ФЗ “О защите прав юридических лиц и индивидуальных предпринимателей при осуществлении государственного контроля (надзора)
         /// и муниципального контроля”)
         /// </summary>
-        public string CheckBase;
+        [DataMember]
+        public string CheckBase { get; set; }
 
         /// <summary>
         ///  Дата начала проведения проверки:
         /// “__”	____ 20__г
         /// </summary>
-        public DateTime? CheckDateStart;
+        [DataMember]
+        public DateTime? CheckDateStart { get; set; }
 
         /// <summary>
         /// Время начала проведения проверки: (а чем отличается от даты?)
         /// “__”	____ 20__г
         /// </summary>
-        public DateTime? CheckTimeStart;
+        [DataMember]
+        public DateTime? CheckTimeStart { get; set; }
 
         /// <summary>
         /// Приложения:
@@ -50,11 +55,13 @@ namespace ActsModel.Model
         /// органа муниципального контроля о проведении внеплановой выездной проверки. 
         /// Документы, содержащие сведения, послужившие основанием для проведения внеплановой проверки)
         /// </summary>
-        public string Additions;
+        [DataMember]
+        public string Additions { get; set; }
 
         /// <summary>
         /// Дата и время составления документа:
         /// </summary>
-        public DateTime? DateTimeOfDocCreation;
+        [DataMember]
+        public DateTime? DateTimeOfDocCreation { get; set; }
     }
 }

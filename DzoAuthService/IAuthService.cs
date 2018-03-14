@@ -61,6 +61,8 @@ namespace DzoAuthService
         [OperationContract]
         List<Regulation> GetRegulations(Token token, Func<Regulation, bool> predicate);
 
+        List<Photo> GetPhotoTablePhotos(Token token, PhotoTable photoTable);
+
         [OperationContract]
         bool DeleteAct(ActBase act, Token token);
 

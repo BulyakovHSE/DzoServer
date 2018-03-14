@@ -6,15 +6,17 @@ namespace ActsModel.Model
     [DataContract]
     public class ActBase
     {
+        [DataMember]
         [Key]
         public int Id { get; set; }
-
-        public int RegionNum => (int) Region;
-
+        
+        [DataMember]
+        public int RegionNum => 1 + (int) Region;
+        
+        [DataMember]
         public Region Region { get; set; }
-
+        
+        [DataMember]
         public byte[] DocumentBytes { get; set; }
-
-        public string Discriminator { get; set; }
     }
 }

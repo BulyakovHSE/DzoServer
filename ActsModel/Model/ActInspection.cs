@@ -13,42 +13,49 @@ namespace ActsModel.Model
         /// Наименование территориального органа администрации Перми, уполномоченного 
         /// на осуществеление муницип. зем. контроля
         /// </summary>
-        public string TerritorialBodyName;
+        [DataMember]
+        public string TerritorialBodyName { get; set; }
 
         /// <summary>
         ///  Номер акта
         /// </summary>
-        public string ActNum;
+        [DataMember]
+        public string ActNum { get; set; }
 
         /// <summary>
         /// Дата составления акта
         /// “__”	____ 20__г
         /// </summary>
-        public DateTime? DateCreation;
+        [DataMember]
+        public DateTime? DateCreation { get; set; }
 
         /// <summary>
         /// Место составления и время
         /// </summary>
-        public string PlaceAndTimeCreation;
+        [DataMember]
+        public string PlaceAndTimeCreation { get; set; }
 
         /// <summary>
         /// Обследование земельного участка проведено на основании:
         /// (указываются реквизиты основания для проведения обследования)
         /// </summary>
-        public string ReasonRequisites;
+        [DataMember]
+        public string ReasonRequisites { get; set; }
 
         /// <summary>
         /// Обследование земельного участка провели:
         /// (должность, фамилия, имя, отчество, должность должностного 
         /// лица(должностных лиц), проводившего обследование)
         /// </summary>
-        public string CheckContactInfos;
+        [DataMember]
+        public string CheckContactInfos { get; set; }
 
         /// <summary>
         /// Лицо(а), участвовавшее(ие) в обследовании:
         /// (фамилия, имя, отчество, должность участвующего(их) в обследовании земельного участка)
         /// </summary>
-        public string InvolvedContactInfos;
+        [DataMember]
+        public string InvolvedContactInfos { get; set; }
 
 
         /// <summary>
@@ -56,19 +63,22 @@ namespace ActsModel.Model
         /// (кадастровый номер земельного участка, адрес обследуемой территории)
         /// Кадастровый номер зем. участка
         /// </summary>
-        public string CadastralNum;
+        [DataMember]
+        public string CadastralNum { get; set; }
 
         /// <summary>
         /// Произведено обследование земельного участка:
         /// (кадастровый номер земельного участка, адрес обследуемой территории)
         /// Адрес обследуемой территории
         /// </summary>
-        public string AreaAddress;
+        [DataMember]
+        public string AreaAddress { get; set; }
 
         /// <summary>
         /// Площадь земельного участка
         /// </summary>
-        public string AreaSquare;
+        [DataMember]
+        public string AreaSquare { get; set; }
 
         /// <summary>
         /// Земельный участок предоставлен...
@@ -76,14 +86,16 @@ namespace ActsModel.Model
         /// Ф.И.О.физического лица, основание предоставления-указать название, дату
         /// и номер документа о предоставлении земельного участка)
         /// </summary>
-        public string ProvidedToInfo;
+        [DataMember]
+        public string ProvidedToInfo { get; set; }
 
         /// <summary>
         /// Мероприятия, проводимые в ходе обследования:
         /// фотографирование, обмер земельного участка, и другое:
         /// (указывается марка фотоаппарата, марка, идентификационные параметры измерительного инструмента)
         /// </summary>
-        public string DeviceParameters;
+        [DataMember]
+        public string DeviceParameters { get; set; }
 
         /// <summary>
         /// В ходе обследования установлено:
@@ -92,12 +104,14 @@ namespace ActsModel.Model
         /// земельного участка(фактическая, самовольно занятая), сведения о
         /// выявленных нарушениях требований законодательства и(или) требований установленных правовыми актами города Перми)
         /// </summary>
-        public string ResearchResults;
+        [DataMember]
+        public string ResearchResults { get; set; }
 
         /// <summary>
         /// Приложения к акту: 
         /// (фотоснимки, схема земельного участка, обмер земельного участка)
         /// </summary>
-        public string ActAnnexes;
+        [DataMember]
+        public string ActAnnexes { get; set; }
     }
 }

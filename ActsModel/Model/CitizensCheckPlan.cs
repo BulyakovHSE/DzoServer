@@ -12,63 +12,74 @@ namespace ActsModel.Model
         /// <summary>
         /// (наименование органа муниципального земельного контроля)
         /// </summary>
-        public string TerritorialBodyName;
+        [DataMember]
+        public string TerritorialBodyName { get; set; }
 
         /// <summary>
         /// Утвержден
         /// (Ф.И.О. и подпись руководителя органа муниципального земельного контроля)
         /// </summary>
-        public string ApprovedByInfo;
+        [DataMember]
+        public string ApprovedByInfo { get; set; }
 
         /// <summary>
         /// От 
         /// _______________ 20___ г.
         /// </summary>
-        public DateTime? ApprovedTime;
+        [DataMember]
+        public DateTime? ApprovedTime { get; set; }
 
         /// <summary>
         /// План проведения плановых проверок граждан на 
         /// 20___ год
         /// </summary>
-        public string ScheduledInspectionYear;
+        [DataMember]
+        public string ScheduledInspectionYear { get; set; }
 
         /// <summary>
         /// Объект земельных отношений, подлежащий проверке
         /// кадастровый номер земельного участка, его площадь, категория, 
         /// вид разрешенного использования и местоположение
         /// </summary>
-        public string EarthObject;
+        [DataMember]
+        public string EarthObject { get; set; }
 
         /// <summary>
         /// Фамилия, имя, отчество (последнее при наличии) гражданина
         /// </summary>
-        public string CitizenName;
+        [DataMember]
+        public string CitizenName { get; set; }
 
         /// <summary>
         /// Цель проведения проверки
         /// </summary>
-        public string CheckAim;
+        [DataMember]
+        public string CheckAim { get; set; }
 
         /// <summary>
         /// Основание проведения проверки
         /// </summary>
-        public string CheckBase;
+        [DataMember]
+        public string CheckBase { get; set; }
 
         /// <summary>
         /// Дата начала проведения проверки (Указывается календарный месяц начала проведения проверки.)
         /// </summary>
-        public string CheckStartDate;
+        [DataMember]
+        public string CheckStartDate { get; set; }
 
         /// <summary>
         /// Срок проведения плановой проверки 
-        // (рабочих дней)
+        /// (рабочих дней)
         /// </summary>
-        public string CheckDurationInDays;
+        [DataMember]
+        public string CheckDurationInDays { get; set; }
 
         /// <summary>
         ///  Наименование федерального органа государственного земельного надзора, 
-        // с которым проверка проводится совместно
+        /// с которым проверка проводится совместно
         /// </summary>
-        public string FederalBodyName;
+        [DataMember]
+        public string FederalBodyName { get; set; }
     }
 }
