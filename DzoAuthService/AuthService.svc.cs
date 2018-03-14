@@ -7,6 +7,7 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using ActsModel;
+using ActsModel.Model;
 
 namespace DzoAuthService
 {
@@ -25,59 +26,215 @@ namespace DzoAuthService
             }
         }
 
-        public List<Act> GetActs(Token token, int count, int offset)
+        public List<ActBase> GetActs(Token token, int count, int offset)
         {
             if (!Token.Exists(token)) return null;
             using (var db = new DzoContext())
             {
-                if (token.UserRegion == Region.All) return db.Acts.OrderBy(x=>x.Id).Skip(offset).Take(count).ToList();
-                return db.Acts.Where(x => x.CreatorRegion == token.UserRegion).OrderBy(x=>x.Id).Skip(offset).Take(count).ToList();
+                if (token.UserRegion == Region.All) return db.Acts.OrderBy(x => x.Id).Skip(offset).Take(count).ToList();
+                return db.Acts.Where(x => x.Region == token.UserRegion).OrderBy(x => x.Id).Skip(offset).Take(count).ToList();
             }
         }
 
-        public bool DeleteAct(Act act, Token token)
+        public List<ActBase> GetSomeActs(Token token, Func<ActBase, bool> predicate)
         {
-            if (!Token.Exists(token)) return false;
+            if (!Token.Exists(token)) return null;
             using (var db = new DzoContext())
             {
-                try
+                if (token.UserRegion == Region.All) return db.Acts.Where(predicate).ToList();
+                return db.Acts.Where(x => x.Region == token.UserRegion).AsEnumerable().Where(predicate).ToList();
+            }
+        }
+
+        public List<ActCommon> GetActsCommon(Token token, Func<ActCommon, bool> predicate)
+        {
+            if (!Token.Exists(token)) return null;
+            using (var db = new DzoContext())
+            {
+                if (token.UserRegion == Region.All) return db.CommonActs.Where(predicate).ToList();
+                return db.CommonActs.Where(x => x.Region == token.UserRegion).AsEnumerable().Where(predicate).ToList();
+            }
+        }
+
+        public List<ActIndividual> GetActsIndividual(Token token, Func<ActIndividual, bool> predicate)
+        {
+            if (!Token.Exists(token)) return null;
+            using (var db = new DzoContext())
+            {
+                if (token.UserRegion == Region.All) return db.IndividualActs.Where(predicate).ToList();
+                return db.IndividualActs.Where(x => x.Region == token.UserRegion).AsEnumerable().Where(predicate).ToList();
+            }
+        }
+
+        public List<ActInpectationFl> GetActsInpectationFl(Token token, Func<ActInpectationFl, bool> predicate)
+        {
+            if (!Token.Exists(token)) return null;
+            using (var db = new DzoContext())
+            {
+                if (token.UserRegion == Region.All) return db.ActsInspectionFl.Where(predicate).ToList();
+                return db.ActsInspectionFl.Where(x => x.Region == token.UserRegion).AsEnumerable().Where(predicate).ToList();
+            }
+        }
+
+        public List<ActInspectationUlIp> GetActsInspectationUlIp(Token token, Func<ActInspectationUlIp, bool> predicate)
+        {
+            if (!Token.Exists(token)) return null;
+            using (var db = new DzoContext())
+            {
+                if (token.UserRegion == Region.All) return db.ActsInspectionUlIp.Where(predicate).ToList();
+                return db.ActsInspectionUlIp.Where(x => x.Region == token.UserRegion).AsEnumerable().Where(predicate).ToList();
+            }
+        }
+
+        public List<ActInspection> GetActInspection(Token token, Func<ActInspection, bool> predicate)
+        {
+            if (!Token.Exists(token)) return null;
+            using (var db = new DzoContext())
+            {
+                if (token.UserRegion == Region.All) return db.ActsInspection.Where(predicate).ToList();
+                return db.ActsInspection.Where(x => x.Region == token.UserRegion).AsEnumerable().Where(predicate).ToList();
+            }
+        }
+
+        public List<AgreementStatement> GetAgreementStatements(Token token, Func<AgreementStatement, bool> predicate)
+        {
+            if (!Token.Exists(token)) return null;
+            using (var db = new DzoContext())
+            {
+                if (token.UserRegion == Region.All) return db.AgreementStatements.Where(predicate).ToList();
+                return db.AgreementStatements.Where(x => x.Region == token.UserRegion).AsEnumerable().Where(predicate).ToList();
+            }
+        }
+
+        public List<AreaMeasurement> GetAreaMeasurements(Token token, Func<AreaMeasurement, bool> predicate)
+        {
+            if (!Token.Exists(token)) return null;
+            using (var db = new DzoContext())
+            {
+                if (token.UserRegion == Region.All) return db.AreaMeasurements.Where(predicate).ToList();
+                return db.AreaMeasurements.Where(x => x.Region == token.UserRegion).AsEnumerable().Where(predicate).ToList();
+            }
+        }
+
+        public List<CheckingJournal> GetCheckingJournals(Token token, Func<CheckingJournal, bool> predicate)
+        {
+            if (!Token.Exists(token)) return null;
+            using (var db = new DzoContext())
+            {
+                if (token.UserRegion == Region.All) return db.CheckingJournals.Where(predicate).ToList();
+                return db.CheckingJournals.Where(x => x.Region == token.UserRegion).AsEnumerable().Where(predicate).ToList();
+            }
+        }
+
+        public List<CitizensCheckPlan> GetCitizensCheckPlans(Token token, Func<CitizensCheckPlan, bool> predicate)
+        {
+            if (!Token.Exists(token)) return null;
+            using (var db = new DzoContext())
+            {
+                if (token.UserRegion == Region.All) return db.CitizensCheckPlans.Where(predicate).ToList();
+                return db.CitizensCheckPlans.Where(x => x.Region == token.UserRegion).AsEnumerable().Where(predicate).ToList();
+            }
+        }
+
+        public List<OrderInspectionUlIp> GetOrdersInspectionUlIp(Token token, Func<OrderInspectionUlIp, bool> predicate)
+        {
+            if (!Token.Exists(token)) return null;
+            using (var db = new DzoContext())
+            {
+                if (token.UserRegion == Region.All) return db.OrderInspectionsUlIp.Where(predicate).ToList();
+                return db.OrderInspectionsUlIp.Where(x => x.Region == token.UserRegion).AsEnumerable().Where(predicate).ToList();
+            }
+        }
+
+        public List<PhotoTable> GetPhotoTables(Token token, Func<PhotoTable, bool> predicate)
+        {
+            if (!Token.Exists(token)) return null;
+            using (var db = new DzoContext())
+            {
+                if (token.UserRegion == Region.All) return db.PhotoTables.Where(predicate).ToList();
+                return db.PhotoTables.Where(x => x.Region == token.UserRegion).AsEnumerable().Where(predicate).ToList();
+            }
+        }
+
+        public List<Protocol> GetProtocols(Token token, Func<Protocol, bool> predicate)
+        {
+            if (!Token.Exists(token)) return null;
+            using (var db = new DzoContext())
+            {
+                if (token.UserRegion == Region.All) return db.Protocols.Where(predicate).ToList();
+                return db.Protocols.Where(x => x.Region == token.UserRegion).AsEnumerable().Where(predicate).ToList();
+            }
+        }
+
+        public List<Regulation> GetRegulations(Token token, Func<Regulation, bool> predicate)
+        {
+            if (!Token.Exists(token)) return null;
+            using (var db = new DzoContext())
+            {
+                if (token.UserRegion == Region.All) return db.Regulations.Where(predicate).ToList();
+                return db.Regulations.Where(x => x.Region == token.UserRegion).AsEnumerable().Where(predicate).ToList();
+            }
+        }
+
+
+        public bool DeleteAct(ActBase act, Token token)
+        {
+            if (!Token.Exists(token)) return false;
+            try
+            {
+                if (token.UserRegion == Region.All)
                 {
-                    bool res = false;
-                    var acts = db.Acts.ToList();
-                    Act _act = null;
-                    if (acts.Contains(act))
-                        _act = acts.First(x => x.Equals(act));
-                    if (_act != null)
+                    using (var db = new DzoContext())
                     {
-                        db.Acts.Remove(_act);
-                        res = true;
+                        var result = db.Acts.Remove(act) != null;
+                        db.SaveChanges();
+                        return result;
                     }
+                }
 
-                    db.SaveChanges();
-                    return res;
-                }
-                catch (Exception)
+                if (act.Region != token.UserRegion) return false;
+                using (var db = new DzoContext())
                 {
-                    return false;
+                    var result = db.Acts.Remove(act) != null;
+                    db.SaveChanges();
+                    return result;
                 }
+            }
+            catch
+            {
+                return false;
             }
         }
 
-        public bool AddAct(Act act, Token token)
+        public bool AddAct(ActBase act, Token token)
         {
-            if (!Token.Exists(token)) return false;
-            using (var db = new DzoContext())
+            var type = act.GetType();
+            try
             {
-                try
+                using (var db = new DzoContext())
                 {
-                    var res = db.Acts.Add(act) != null;
+                    var ok = false;
+                    if (type == typeof(ActBase)) ok = db.Acts.Add(act) != null;
+                    if (type == typeof(ActCommon)) ok = db.CommonActs.Add(act as ActCommon ?? throw new InvalidOperationException()) != null;
+                    if (type == typeof(ActIndividual)) ok = db.IndividualActs.Add(act as ActIndividual ?? throw new InvalidOperationException()) != null;
+                    if (type == typeof(ActInpectationFl)) ok = db.ActsInspectionFl.Add(act as ActInpectationFl ?? throw new InvalidOperationException()) != null;
+                    if (type == typeof(ActInspectationUlIp)) ok = db.ActsInspectionUlIp.Add(act as ActInspectationUlIp ?? throw new InvalidOperationException()) != null;
+                    if (type == typeof(ActInspection)) ok = db.ActsInspection.Add(act as ActInspection ?? throw new InvalidOperationException()) != null;
+                    if (type == typeof(AgreementStatement)) ok = db.AgreementStatements.Add(act as AgreementStatement ?? throw new InvalidOperationException()) != null;
+                    if (type == typeof(AreaMeasurement)) ok = db.AreaMeasurements.Add(act as AreaMeasurement ?? throw new InvalidOperationException()) != null;
+                    if (type == typeof(CheckingJournal)) ok = db.CheckingJournals.Add(act as CheckingJournal ?? throw new InvalidOperationException()) != null;
+                    if (type == typeof(CitizensCheckPlan)) ok = db.CitizensCheckPlans.Add(act as CitizensCheckPlan ?? throw new InvalidOperationException()) != null;
+                    if (type == typeof(OrderInspectionUlIp)) ok = db.OrderInspectionsUlIp.Add(act as OrderInspectionUlIp ?? throw new InvalidOperationException()) != null;
+                    if (type == typeof(PhotoTable)) ok = db.PhotoTables.Add(act as PhotoTable ?? throw new InvalidOperationException()) != null;
+                    if (type == typeof(Protocol)) ok = db.Protocols.Add(act as Protocol ?? throw new InvalidOperationException()) != null;
+                    if (type == typeof(Regulation)) ok = db.Regulations.Add(act as Regulation ?? throw new InvalidOperationException()) != null;
                     db.SaveChanges();
-                    return res;
+                    return ok;
                 }
-                catch (Exception)
-                {
-                    return false;
-                }
+            }
+            catch
+            {
+                return false;
             }
         }
 

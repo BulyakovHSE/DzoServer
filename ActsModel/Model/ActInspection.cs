@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace ActsModel.Model
 {
     /// <summary>
     /// Метки в документе - названия переменных
     /// </summary>
+    [DataContract]
     public class ActInspection : ActCommon
     {
         /// <summary>
@@ -22,7 +24,7 @@ namespace ActsModel.Model
         /// Дата составления акта
         /// “__”	____ 20__г
         /// </summary>
-        public DateTime DateCreation;
+        public DateTime? DateCreation;
 
         /// <summary>
         /// Место составления и время

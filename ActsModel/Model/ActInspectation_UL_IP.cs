@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace ActsModel.Model
 {
     /// <summary>
     /// АКТ ПРОВЕРКИ ЮЛ,ИП
     /// </summary>
+    [DataContract] 
     public class ActInspectationUlIp : ActCommon
     {
         /// <summary>
@@ -22,7 +24,7 @@ namespace ActsModel.Model
         /// Дата и время составления акта
         /// “__”	____ 20__г.
         /// </summary>
-        public DateTime DateTimeCreation;
+        public DateTime? DateTimeCreation;
 
         /// <summary>
         /// Номер акта проверки

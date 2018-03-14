@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace ActsModel.Model
 {
     /// <summary>
     /// ПЛАН ПРОВЕРКИ ГРАЖДАН
     /// </summary>
+    [DataContract]
     public class CitizensCheckPlan : ActIndividual
     {
         /// <summary>
@@ -22,7 +24,7 @@ namespace ActsModel.Model
         /// От 
         /// _______________ 20___ г.
         /// </summary>
-        public DateTime ApprovedTime;
+        public DateTime? ApprovedTime;
 
         /// <summary>
         /// План проведения плановых проверок граждан на 

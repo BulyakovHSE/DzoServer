@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace ActsModel.Model
 {
     /// <summary>
     /// АКТ ПРОВЕРКИ ФЛ
     /// </summary>
+    [DataContract]
     public class ActInpectationFl : ActCommon
     {
         /// <summary>
@@ -16,7 +18,7 @@ namespace ActsModel.Model
         /// Дата составления акта
         /// “__”	____ 20__г
         /// </summary>
-        public DateTime DateTimeCreation;
+        public DateTime? DateTimeCreation;
 
         /// <summary>
         /// Место составления
@@ -38,7 +40,7 @@ namespace ActsModel.Model
         ///  от 
         /// “__”	____ 20__г
         /// </summary>
-        public DateTime BaseOnOrderDate;
+        public DateTime? BaseOnOrderDate;
 
         /// <summary>
         /// Номер распоряжения?
@@ -77,13 +79,13 @@ namespace ActsModel.Model
         /// Проверка проводилась с 
         /// “__”	____ 20__г
         /// </summary>
-        public DateTime CheckDateStart;
+        public DateTime? CheckDateStart;
 
         /// <summary>
         /// до
         /// “__”	____ 20__г
         /// </summary>
-        public DateTime CheckDateFinish;
+        public DateTime? CheckDateFinish;
 
         /// <summary>
         /// Проверкой установлено: 

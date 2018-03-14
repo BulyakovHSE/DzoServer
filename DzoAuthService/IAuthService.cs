@@ -6,19 +6,10 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using ActsModel;
+using ActsModel.Model;
 
 namespace DzoAuthService
 {
-    // PLACSIN
-    // проверки требований
-    // надежность программногоо обеспечения майерс
-    // виды обслуживания, персонал
-    // требования к программной документации таблица из 3 граф название очем читатель(кто)
-    // технико эконом харки: ориентировачная эконом эфф проги
-    // предлагаемая годовая потребность
-    // стадии и этапы разработки
-    // в плане стопроц события
-    // порядок контроля
     [ServiceContract]
     public interface IAuthService
     {
@@ -26,12 +17,54 @@ namespace DzoAuthService
         Token Authenticate(string login, string password);
 
         [OperationContract]
-        List<Act> GetActs(Token token, int count, int offset);
+        List<ActBase> GetActs(Token token, int count, int offset);
 
         [OperationContract]
-        bool DeleteAct(Act act, Token token);
+        List<ActBase> GetSomeActs(Token token, Func<ActBase, bool> predicate);
 
         [OperationContract]
-        bool AddAct(Act act, Token token);
+        List<ActCommon> GetActsCommon(Token token, Func<ActCommon, bool> predicate);
+
+        [OperationContract]
+        List<ActIndividual> GetActsIndividual(Token token, Func<ActIndividual, bool> predicate);
+        
+        [OperationContract]
+        List<ActInpectationFl> GetActsInpectationFl(Token token, Func<ActInpectationFl, bool> predicate);
+        
+        [OperationContract]
+        List<ActInspectationUlIp> GetActsInspectationUlIp(Token token, Func<ActInspectationUlIp, bool> predicate);
+        
+        [OperationContract]
+        List<ActInspection> GetActInspection(Token token, Func<ActInspection, bool> predicate);
+        
+        [OperationContract]
+        List<AgreementStatement> GetAgreementStatements(Token token, Func<AgreementStatement, bool> predicate);
+        
+        [OperationContract]
+        List<AreaMeasurement> GetAreaMeasurements(Token token, Func<AreaMeasurement, bool> predicate);
+        
+        [OperationContract]
+        List<CheckingJournal> GetCheckingJournals(Token token, Func<CheckingJournal, bool> predicate);
+        
+        [OperationContract]
+        List<CitizensCheckPlan> GetCitizensCheckPlans(Token token, Func<CitizensCheckPlan, bool> predicate);
+        
+        [OperationContract]
+        List<OrderInspectionUlIp> GetOrdersInspectionUlIp(Token token, Func<OrderInspectionUlIp, bool> predicate);
+        
+        [OperationContract]
+        List<PhotoTable> GetPhotoTables(Token token, Func<PhotoTable, bool> predicate);
+        
+        [OperationContract]
+        List<Protocol> GetProtocols(Token token, Func<Protocol, bool> predicate);
+        
+        [OperationContract]
+        List<Regulation> GetRegulations(Token token, Func<Regulation, bool> predicate);
+
+        [OperationContract]
+        bool DeleteAct(ActBase act, Token token);
+
+        [OperationContract]
+        bool AddAct(ActBase act, Token token);
     }
 }

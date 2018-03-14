@@ -1,17 +1,19 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace ActsModel.Model
 {
     /// <summary>
     /// ПРЕДПИСАНИЕ УСТРАНЕНИЯ НАРУШЕНИЯ ЗЕМ ЗАКОНА
     /// </summary>
+    [DataContract]
     public class Regulation : ActIndividual
     {
         /// <summary>
         /// ПРЕДПИСАНИЕ об устранении нарушения земельного законодательства от
         /// "___" ____________ 20___ г.
         /// </summary>
-        public DateTime Date;
+        public DateTime? Date;
 
         /// <summary>
         /// Номер предписания
@@ -64,7 +66,7 @@ namespace ActsModel.Model
         /// устранить допущенное нарушение до
         /// "___" ____________ 20___ г.
         /// </summary>
-        public DateTime CorrectToDate;
+        public DateTime? CorrectToDate;
 
         /// <summary>
         /// Информацию   об   исполнении   предписания  с  приложением  документов,

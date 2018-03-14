@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace ActsModel.Model
 {
     /// <summary>
     /// ЗАЯВЛЕНИЕ О СОГЛАСОВАНИИ ПРОВЕРКИ
     /// </summary>
+    [DataContract]
     public class AgreementStatement : ActIndividual
     {
         /// <summary>
@@ -33,13 +35,13 @@ namespace ActsModel.Model
         ///  Дата начала проведения проверки:
         /// “__”	____ 20__г
         /// </summary>
-        public DateTime CheckDateStart;
+        public DateTime? CheckDateStart;
 
         /// <summary>
         /// Время начала проведения проверки: (а чем отличается от даты?)
         /// “__”	____ 20__г
         /// </summary>
-        public DateTime CheckTimeStart;
+        public DateTime? CheckTimeStart;
 
         /// <summary>
         /// Приложения:
@@ -53,6 +55,6 @@ namespace ActsModel.Model
         /// <summary>
         /// Дата и время составления документа:
         /// </summary>
-        public DateTime DateTimeOfDocCreation;
+        public DateTime? DateTimeOfDocCreation;
     }
 }

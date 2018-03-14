@@ -71,6 +71,14 @@
     <Compile Include="Migrations\201802070741372_addedUser.Designer.cs">
       <DependentUpon>201802070741372_addedUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803141045068_newModel.cs" />
+    <Compile Include="Migrations\201803141045068_newModel.Designer.cs">
+      <DependentUpon>201803141045068_newModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803141048005_newModel1.cs" />
+    <Compile Include="Migrations\201803141048005_newModel1.Designer.cs">
+      <DependentUpon>201803141048005_newModel1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\ActBase.cs" />
     <Compile Include="Model\ActCommon.cs" />
@@ -107,6 +115,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802070741372_addedUser.resx">
       <DependentUpon>201802070741372_addedUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803141045068_newModel.resx">
+      <DependentUpon>201803141045068_newModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803141048005_newModel1.resx">
+      <DependentUpon>201803141048005_newModel1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

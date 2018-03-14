@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace ActsModel.Model
 {
     /// <summary>
     /// ФОТОТАБЛИЦА
     /// </summary>
+    [DataContract]
     public class PhotoTable : ActCommon
     {
         /// <summary>
@@ -17,7 +19,7 @@ namespace ActsModel.Model
         /// приложение к акту проверки от ... 
         /// "___" ________ 20__ г. 
         /// </summary>
-        public DateTime AdditionToActDate;
+        public DateTime? AdditionToActDate;
 
         /// <summary>
         /// Номер акта проверки

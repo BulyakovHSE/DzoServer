@@ -1,3 +1,5 @@
+using ActsModel.Model;
+
 namespace ActsModel
 {
     using System;
@@ -20,7 +22,35 @@ namespace ActsModel
             SaveChanges();
         }
 
-        public DbSet<Act> Acts { get; set; }
+        public DbSet<ActBase> Acts { get; set; }
+
+        public DbSet<ActCommon> CommonActs { get; set; }
+
+        public DbSet<ActIndividual> IndividualActs { get; set; }
+
+        public DbSet<ActInpectationFl> ActsInspectionFl { get; set; }
+
+        public DbSet<ActInspectationUlIp> ActsInspectionUlIp { get; set; }
+
+        public DbSet<ActInspection> ActsInspection { get; set; }
+
+        public DbSet<AgreementStatement> AgreementStatements { get; set; }
+
+        public DbSet<AreaMeasurement> AreaMeasurements { get; set; }
+
+        public DbSet<CheckingJournal> CheckingJournals { get; set; }
+
+        public DbSet<CitizensCheckPlan> CitizensCheckPlans { get; set; }
+
+        public DbSet<OrderInspectionUlIp> OrderInspectionsUlIp { get; set; }
+
+        public DbSet<PhotoTable> PhotoTables { get; set; }
+
+        public DbSet<Protocol> Protocols { get; set; }
+
+        public DbSet<Regulation> Regulations { get; set; }
+
+        //public DbSet<Act> Acts { get; set; }
 
         public DbSet<User> Users { get; set; }
     }

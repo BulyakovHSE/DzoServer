@@ -1,15 +1,19 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace ActsModel.Model
 {
-    // ПРОТОКОЛ ОБ АДМИНИСТРАТИВНОМ ПРАВОНАРУШЕНИИ
+    /// <summary>
+    /// ПРОТОКОЛ ОБ АДМИНИСТРАТИВНОМ ПРАВОНАРУШЕНИИ
+    /// </summary>
+    [DataContract]
     public class Protocol : ActIndividual
     {
         /// <summary>
         /// "___" ____________ 20___ г. 
         ///"___" час. "___" мин.
         /// </summary>
-        public DateTime Date;
+        public DateTime? Date;
 
         /// <summary>
         /// N ____________

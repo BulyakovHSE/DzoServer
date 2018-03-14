@@ -1,9 +1,12 @@
-﻿namespace ActsModel.Model
+﻿using System.Runtime.Serialization;
+
+namespace ActsModel.Model
 {
     /// <summary>
     /// ЖУРНАЛ УЧЕТА ПРОВЕРОК ЮЛ ИП
     /// с названиями туго, ибо в одну строку уж много всякой разной инфы может попасть
     /// </summary>
+    [DataContract]
     public class CheckingJournal : ActIndividual
     {
         /// <summary>

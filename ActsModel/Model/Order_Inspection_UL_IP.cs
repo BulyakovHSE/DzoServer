@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace ActsModel.Model
 {
     /// <summary>
     /// Распоряжение о проверке ЮЛ, ИП
     /// </summary>
+    [DataContract]
     public class OrderInspectionUlIp : ActIndividual
     {
         /// <summary>
@@ -77,12 +79,12 @@ namespace ActsModel.Model
         /// <summary>
         /// К проведению проверки приступить с “__” ______ 20__ года.
         /// </summary>
-        public DateTime CheckingTimeStart;
+        public DateTime? CheckingTimeStart;
 
         /// <summary>
         /// Проверку окончить не позднее “__” ______ 20__ года.
         /// </summary>
-        public DateTime CheckingTimeFinish;
+        public DateTime? CheckingTimeFinish;
 
         /// <summary>
         /// Правовые основания проведения проверки: ссылка на положения нормативного правового акта, в соответствии с которым осуществляется проверка

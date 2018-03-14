@@ -1,8 +1,11 @@
-﻿namespace ActsModel.Model
+﻿using System.Runtime.Serialization;
+
+namespace ActsModel.Model
 {
     /// <summary>
     /// ФОТО
     /// </summary>
+    [DataContract]
     public class Photo
     {
         /// <summary>

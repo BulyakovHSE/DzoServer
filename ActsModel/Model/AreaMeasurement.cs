@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace ActsModel.Model
 {
     /// <summary>
     /// ОБМЕР ПЛОЩАДИ ЗЕМЕЛЬНОГО УЧАСТКА
     /// </summary>
+    [DataContract]
     public class AreaMeasurement : ActCommon
     {
         /// <summary>
@@ -16,7 +18,7 @@ namespace ActsModel.Model
         /// приложение к акту проверки от 
         /// "__" _________ 20__ г. 
         /// </summary>
-        public DateTime Date;
+        public DateTime? Date;
 
         /// <summary>
         /// Номер акта
