@@ -5,7 +5,7 @@ namespace ActsModel.Model
     /// <summary>
     /// ЗАЯВЛЕНИЕ О СОГЛАСОВАНИИ ПРОВЕРКИ
     /// </summary>
-    public class AgreementStatement
+    public class AgreementStatement : ActIndividual
     {
         /// <summary>
         /// просим согласия на проведение внеплановой выездной проверки в отношении

@@ -3,7 +3,7 @@
 namespace ActsModel.Model
 {
     // ПРОТОКОЛ ОБ АДМИНИСТРАТИВНОМ ПРАВОНАРУШЕНИИ
-    public class Protocol
+    public class Protocol : ActIndividual
     {
         /// <summary>
         /// "___" ____________ 20___ г. 

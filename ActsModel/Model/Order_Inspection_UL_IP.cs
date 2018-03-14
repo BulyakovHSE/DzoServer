@@ -5,7 +5,7 @@ namespace ActsModel.Model
     /// <summary>
     /// Распоряжение о проверке ЮЛ, ИП
     /// </summary>
-    public class OrderInspectionUlIp
+    public class OrderInspectionUlIp : ActIndividual
     {
         /// <summary>
         /// Наименование территориального органа администрации Перми, уполномоченного 

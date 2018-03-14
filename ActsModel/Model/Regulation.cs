@@ -3,9 +3,9 @@
 namespace ActsModel.Model
 {
     /// <summary>
-    /// ПРЕДПИСАНИЕ
+    /// ПРЕДПИСАНИЕ УСТРАНЕНИЯ НАРУШЕНИЯ ЗЕМ ЗАКОНА
     /// </summary>
-    public class Regulation
+    public class Regulation : ActIndividual
     {
         /// <summary>
         /// ПРЕДПИСАНИЕ об устранении нарушения земельного законодательства от

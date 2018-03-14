@@ -5,7 +5,7 @@ namespace ActsModel.Model
     /// <summary>
     /// ПЛАН ПРОВЕРКИ ГРАЖДАН
     /// </summary>
-    public class CitizensCheckPlan
+    public class CitizensCheckPlan : ActIndividual
     {
         /// <summary>
         /// (наименование органа муниципального земельного контроля)

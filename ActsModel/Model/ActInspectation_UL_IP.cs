@@ -19,15 +19,10 @@ namespace ActsModel.Model
         public string PlaceActCreation;
 
         /// <summary>
-        /// Дата составления акта
+        /// Дата и время составления акта
         /// “__”	____ 20__г.
         /// </summary>
-        public DateTime DateCreation;
-
-        /// <summary>
-        /// Время составления акта
-        /// </summary>
-        public string ActTimeCreation;
+        public DateTime DateTimeCreation;
 
         /// <summary>
         /// Номер акта проверки

@@ -4,7 +4,7 @@
     /// ЖУРНАЛ УЧЕТА ПРОВЕРОК ЮЛ ИП
     /// с названиями туго, ибо в одну строку уж много всякой разной инфы может попасть
     /// </summary>
-    public class CheckingJournal
+    public class CheckingJournal : ActIndividual
     {
         /// <summary>
         ///  дата начала ведения журнала
