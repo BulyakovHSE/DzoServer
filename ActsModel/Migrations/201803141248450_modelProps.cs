@@ -18,7 +18,6 @@ namespace ActsModel.Migrations
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.ActBases", t => t.PhotoTable_Id)
                 .Index(t => t.PhotoTable_Id);
-            
             AddColumn("dbo.ActBases", "ActNum", c => c.String());
             AddColumn("dbo.ActBases", "DateTimeCreation", c => c.DateTime());
             AddColumn("dbo.ActBases", "PlaceActCreation", c => c.String());

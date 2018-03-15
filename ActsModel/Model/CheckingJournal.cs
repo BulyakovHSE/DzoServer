@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.Runtime.Serialization;
 
 namespace ActsModel.Model
 {
@@ -13,7 +14,7 @@ namespace ActsModel.Model
         ///  дата начала ведения журнала
         /// </summary>
         [DataMember]
-        public string JournalStartDate { get; set; }
+        public DateTime? JournalStartDate { get; set; }
 
         /// <summary>
         /// наименование юридического лица/фамилия, имя,

@@ -251,8 +251,9 @@ namespace DzoAuthService
                     return ok;
                 }
             }
-            catch
+            catch(Exception e)
             {
+                Console.WriteLine(e.Message);
                 return false;
             }
         }

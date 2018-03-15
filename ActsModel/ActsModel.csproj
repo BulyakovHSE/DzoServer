@@ -83,6 +83,18 @@
     <Compile Include="Migrations\201803141248450_modelProps.Designer.cs">
       <DependentUpon>201803141248450_modelProps.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803141458100_modelchange.cs" />
+    <Compile Include="Migrations\201803141458100_modelchange.Designer.cs">
+      <DependentUpon>201803141458100_modelchange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803141855324_modelchange2.cs" />
+    <Compile Include="Migrations\201803141855324_modelchange2.Designer.cs">
+      <DependentUpon>201803141855324_modelchange2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803151408163_modelchange3.cs" />
+    <Compile Include="Migrations\201803151408163_modelchange3.Designer.cs">
+      <DependentUpon>201803151408163_modelchange3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\ActBase.cs" />
     <Compile Include="Model\ActCommon.cs" />
@@ -128,6 +140,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803141248450_modelProps.resx">
       <DependentUpon>201803141248450_modelProps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803141458100_modelchange.resx">
+      <DependentUpon>201803141458100_modelchange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803141855324_modelchange2.resx">
+      <DependentUpon>201803141855324_modelchange2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803151408163_modelchange3.resx">
+      <DependentUpon>201803151408163_modelchange3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
