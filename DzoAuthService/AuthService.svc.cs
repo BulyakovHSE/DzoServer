@@ -193,6 +193,45 @@ namespace DzoAuthService
             }
         }
 
+        public bool UpdateAct(ActBase act, Token token)
+        {
+            if (!Token.Exists(token)) return false;
+            try
+            {
+                using (var db = new DzoContext())
+                {
+                    var old = db.Acts.First(x => x.Id == act.Id);
+                    db.Acts.Remove(old);
+                    db.Acts.Add(act);
+                    db.SaveChanges();
+                }
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        public bool DeleteActById(int id, Token token)
+        {
+            if (!Token.Exists(token)) return false;
+            try
+            {
+                using (var db = new DzoContext())
+                {
+                    var old = db.Acts.First(x => x.Id == id);
+                    db.Acts.Remove(old);
+                    db.SaveChanges();
+                }
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
 
         public bool DeleteAct(ActBase act, Token token)
         {
