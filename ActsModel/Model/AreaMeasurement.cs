@@ -9,6 +9,8 @@ namespace ActsModel.Model
     [DataContract]
     public class AreaMeasurement : ActCommon
     {
+        public AreaMeasurement():base(ActType.ОбмерПлощадиЗу){}
+
         /// <summary>
         /// (наименование органа муниципального земельного контроля)
         /// </summary>

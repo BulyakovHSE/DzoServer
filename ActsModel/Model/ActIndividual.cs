@@ -11,6 +11,7 @@ namespace ActsModel.Model
     [DataContract]
     public class ActIndividual : ActBase
     {
-        
+        public ActIndividual(ActType actType):base(actType){}
+        public ActIndividual() : base(ActType.Базовый){}
     }
 }

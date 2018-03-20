@@ -9,6 +9,8 @@ namespace ActsModel.Model
     [DataContract]
     public class Regulation : ActIndividual
     {
+        public Regulation():base(ActType.ПредписаниеУтсрНарушЗемЗакона){}
+
         /// <summary>
         /// ПРЕДПИСАНИЕ об устранении нарушения земельного законодательства от
         /// "___" ____________ 20___ г.
@@ -62,13 +64,20 @@ namespace ActsModel.Model
         [DataMember]
         public string ViolationAuthorInfo { get; set; }
 
-        // Я
-        // (должность, Ф.И.О.)
-        // Видимо, это инфа составителя дока
 
-        // ОБЯЗЫВАЮ:
-        // наименование юридического лица, Ф.И.О. руководителя, должностное лицо, индивидуальный предприниматель, физическое лицо
-        // Видимо это "автор" нарушения
+        /// <summary>
+        /// Я
+        /// (должность, Ф.И.О.)
+        /// </summary>
+        [DataMember]
+        public string CreatorInfoFirstName { get; set; }
+
+        /// <summary>
+        /// ОБЯЗЫВАЮ:
+        /// наименование юридического лица, Ф.И.О. руководителя, должностное лицо, индивидуальный предприниматель, физическое лицо
+        /// </summary>
+        [DataMember]
+        public string ViolationAuthor2 { get; set; }
 
         /// <summary>
         /// устранить допущенное нарушение до

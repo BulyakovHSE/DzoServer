@@ -1,0 +1,213 @@
+namespace DlrModel.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class model : DbMigration
+    {
+        public override void Up()
+        {
+            CreateTable(
+                "dbo.ActBases",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        RegionNum = c.Int(nullable: false),
+                        Region = c.Int(nullable: false),
+                        DocumentBytes = c.Binary(),
+                        ActType = c.Int(nullable: false),
+                        CommonNum = c.Int(),
+                        ActNum = c.String(),
+                        DateOfCreation = c.DateTime(),
+                        TimeOfCreation = c.DateTime(),
+                        PlaceActCreation = c.String(),
+                        ActCreator = c.String(),
+                        BaseOnOrder = c.String(),
+                        BaseOnOrderDate = c.DateTime(),
+                        OrderNum = c.String(),
+                        AttendingPersonsInfo = c.String(),
+                        CheckType = c.String(),
+                        AreaAddress = c.String(),
+                        AreaSquare = c.String(),
+                        UserInfo = c.String(),
+                        CheckDateStart = c.DateTime(),
+                        CheckDateFinish = c.DateTime(),
+                        CheckResults = c.String(),
+                        InspectedPersonInfo = c.String(),
+                        ApplicationContent = c.String(),
+                        DuringCheckActivity = c.String(),
+                        AdditionsToAct = c.String(),
+                        TerritorialBodyName = c.String(),
+                        PlaceActCreation1 = c.String(),
+                        DateTimeCreation = c.DateTime(),
+                        ActNum1 = c.String(),
+                        CheckingPlace = c.String(),
+                        OnBaseOfDocs = c.String(),
+                        CheckType1 = c.String(),
+                        ChekingTarget = c.String(),
+                        DateAndTimeOfCheck = c.String(),
+                        CommonCheckDuration = c.String(),
+                        ActCreatedBy = c.String(),
+                        FamiliarPersonInfo = c.String(),
+                        ProsecutorDecision = c.String(),
+                        CheckersInfo = c.String(),
+                        BeholdersInfo = c.String(),
+                        RequirementsViolations = c.String(),
+                        DiscrepanciesInfo = c.String(),
+                        NonComplianceFacts = c.String(),
+                        NoViolations = c.String(),
+                        DocsForAct = c.String(),
+                        PersonInfo = c.String(),
+                        TerritorialBodyName1 = c.String(),
+                        ActNum2 = c.String(),
+                        DateCreation = c.DateTime(),
+                        PlaceAndTimeCreation = c.String(),
+                        ReasonRequisites = c.String(),
+                        CheckContactInfos = c.String(),
+                        InvolvedContactInfos = c.String(),
+                        CadastralNum = c.String(),
+                        AreaAddress1 = c.String(),
+                        AreaSquare1 = c.String(),
+                        ProvidedToInfo = c.String(),
+                        DeviceParameters = c.String(),
+                        ResearchResults = c.String(),
+                        ActAnnexes = c.String(),
+                        TerritorialBodyName2 = c.String(),
+                        Date = c.DateTime(),
+                        ActNum3 = c.String(),
+                        MeasureAuthorInfo = c.String(),
+                        RepresentativePersonInfo = c.String(),
+                        AreaAddress2 = c.String(),
+                        DeviceInfo = c.String(),
+                        AreaSquare2 = c.String(),
+                        AreaCalculation = c.String(),
+                        SpecialMarks = c.String(),
+                        MunitipalControlName = c.String(),
+                        AdditionToActDate = c.DateTime(),
+                        ActNum4 = c.String(),
+                        PersonsInfo = c.String(),
+                        AreaInfo = c.String(),
+                        DeviceInfo1 = c.String(),
+                        PhototableCreator = c.String(),
+                        InspectationTargetInfo = c.String(),
+                        TargetAddress = c.String(),
+                        CheckBase = c.String(),
+                        CheckDateStart1 = c.DateTime(),
+                        CheckTimeStart = c.DateTime(),
+                        Additions = c.String(),
+                        DateTimeOfDocCreation = c.DateTime(),
+                        JournalStartDate = c.DateTime(),
+                        PersonInfo1 = c.String(),
+                        Address = c.String(),
+                        DifferentInfo = c.String(),
+                        ResponsiblePersonInfo = c.String(),
+                        ResponsiblePersonBossInfo = c.String(),
+                        CheckDateStartAndFinishNoUnderline = c.String(),
+                        CommonCheckDurationNoUnderline = c.String(),
+                        StateControlNameNoUnderline = c.String(),
+                        DateNumOrOrderOfCheckNoUnderline = c.String(),
+                        CheckAimTaskAndObjectNoUnderline = c.String(),
+                        CheckTypeNoUnderline = c.String(),
+                        DateNumOfCheckResNoUnderline = c.String(),
+                        FoundViolationsNoUnderline = c.String(),
+                        DateNumOfContentOfEliminationNoUnderline = c.String(),
+                        CheckerPersonInfoNoUnderline = c.String(),
+                        ExpertsInfoNoUnderline = c.String(),
+                        TerritorialBodyName3 = c.String(),
+                        ApprovedByInfo = c.String(),
+                        ApprovedDate = c.DateTime(),
+                        ScheduledInspectionYear = c.String(),
+                        EarthObjectNoUnderline = c.String(),
+                        CitizenNameNoUnderline = c.String(),
+                        CheckAimNoUnderline = c.String(),
+                        CheckBaseNoUnderline = c.String(),
+                        CheckStartDateNoUnderline = c.String(),
+                        CheckDurationInDaysNoUnderline = c.String(),
+                        FederalBodyNameNoUnderline = c.String(),
+                        TerritorialBodyName4 = c.String(),
+                        CheckType2 = c.String(),
+                        OrderDate = c.DateTime(),
+                        OrderCreatorMakerInfo = c.String(),
+                        OrderNum1 = c.String(),
+                        InspectionTarget = c.String(),
+                        TargetPlace = c.String(),
+                        CheckerInfo = c.String(),
+                        ExpertsInfo = c.String(),
+                        CheckingScopes = c.String(),
+                        CheckingAim = c.String(),
+                        CheckingTasks = c.String(),
+                        CheckingDuration = c.String(),
+                        CheckingDateStart = c.DateTime(),
+                        CheckingDateFinish = c.DateTime(),
+                        RightCheckingBases = c.String(),
+                        MandatoryRequirements = c.String(),
+                        CheckingEvents = c.String(),
+                        ProvisionsListOfStateControl = c.String(),
+                        DocumentsForSuccess = c.String(),
+                        OrderCreatorInfo = c.String(),
+                        Date1 = c.DateTime(),
+                        Time = c.DateTime(),
+                        Num = c.String(),
+                        CreationPlace = c.String(),
+                        ActCreatorInfo = c.String(),
+                        InPresenceOfPersonInfo = c.String(),
+                        ViolationDescription = c.String(),
+                        ViolationAuthorInfo = c.String(),
+                        CodexSection = c.String(),
+                        CodexArticle = c.String(),
+                        PersonExplanation = c.String(),
+                        SpecialMarks1 = c.String(),
+                        ProtocolCreatorInfo = c.String(),
+                        Date2 = c.DateTime(),
+                        Num1 = c.String(),
+                        CreatorInfo = c.String(),
+                        AreaAddress3 = c.String(),
+                        AreaSquare3 = c.String(),
+                        AreaUserInfo = c.String(),
+                        ViolationDescription1 = c.String(),
+                        ViolationAuthorInfo1 = c.String(),
+                        CreatorInfoFirstName = c.String(),
+                        ViolationAuthor2 = c.String(),
+                        CorrectToDate = c.DateTime(),
+                        MunicipalAuthorityForDocuments = c.String(),
+                        MunicipalAuthorityAddress = c.String(),
+                        PrescriptionDeliveryMark = c.String(),
+                        Discriminator = c.String(nullable: false, maxLength: 128),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Photos",
+                c => new
+                    {
+                        Id = c.String(nullable: false, maxLength: 128),
+                        Description = c.String(),
+                        PhotoTable_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.ActBases", t => t.PhotoTable_Id)
+                .Index(t => t.PhotoTable_Id);
+            
+            CreateTable(
+                "dbo.Users",
+                c => new
+                    {
+                        UserId = c.Int(nullable: false, identity: true),
+                        Login = c.String(nullable: false),
+                        Password = c.String(nullable: false),
+                        Region = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.UserId);
+            
+        }
+        
+        public override void Down()
+        {
+            DropForeignKey("dbo.Photos", "PhotoTable_Id", "dbo.ActBases");
+            DropIndex("dbo.Photos", new[] { "PhotoTable_Id" });
+            DropTable("dbo.Users");
+            DropTable("dbo.Photos");
+            DropTable("dbo.ActBases");
+        }
+    }
+}

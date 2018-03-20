@@ -9,6 +9,8 @@ namespace ActsModel.Model
     [DataContract]
     public class CitizensCheckPlan : ActIndividual
     {
+        public CitizensCheckPlan():base(ActType.ПланПроверокГраждан){}
+
         /// <summary>
         /// (наименование органа муниципального земельного контроля)
         /// </summary>
@@ -27,7 +29,7 @@ namespace ActsModel.Model
         /// _______________ 20___ г.
         /// </summary>
         [DataMember]
-        public DateTime? ApprovedTime { get; set; }
+        public DateTime? ApprovedDate { get; set; }
 
         /// <summary>
         /// План проведения плановых проверок граждан на 
@@ -42,44 +44,44 @@ namespace ActsModel.Model
         /// вид разрешенного использования и местоположение
         /// </summary>
         [DataMember]
-        public string EarthObject { get; set; }
+        public string EarthObjectNoUnderline { get; set; }
 
         /// <summary>
         /// Фамилия, имя, отчество (последнее при наличии) гражданина
         /// </summary>
         [DataMember]
-        public string CitizenName { get; set; }
+        public string CitizenNameNoUnderline { get; set; }
 
         /// <summary>
         /// Цель проведения проверки
         /// </summary>
         [DataMember]
-        public string CheckAim { get; set; }
+        public string CheckAimNoUnderline { get; set; }
 
         /// <summary>
         /// Основание проведения проверки
         /// </summary>
         [DataMember]
-        public string CheckBase { get; set; }
+        public string CheckBaseNoUnderline { get; set; }
 
         /// <summary>
         /// Дата начала проведения проверки (Указывается календарный месяц начала проведения проверки.)
         /// </summary>
         [DataMember]
-        public string CheckStartDate { get; set; }
+        public string CheckStartDateNoUnderline { get; set; }
 
         /// <summary>
         /// Срок проведения плановой проверки 
         /// (рабочих дней)
         /// </summary>
         [DataMember]
-        public string CheckDurationInDays { get; set; }
+        public string CheckDurationInDaysNoUnderline { get; set; }
 
         /// <summary>
         ///  Наименование федерального органа государственного земельного надзора, 
         /// с которым проверка проводится совместно
         /// </summary>
         [DataMember]
-        public string FederalBodyName { get; set; }
+        public string FederalBodyNameNoUnderline { get; set; }
     }
 }

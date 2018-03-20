@@ -49,11 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Act.cs" />
     <Compile Include="ActType.cs" />
-    <Compile Include="CheckClass.cs" />
-    <Compile Include="CheckType.cs" />
-    <Compile Include="ContactInfo.cs" />
     <Compile Include="DzoContext.cs" />
     <Compile Include="Migrations\201801311300361_first.cs" />
     <Compile Include="Migrations\201801311300361_first.Designer.cs">
@@ -94,6 +90,34 @@
     <Compile Include="Migrations\201803151408163_modelchange3.cs" />
     <Compile Include="Migrations\201803151408163_modelchange3.Designer.cs">
       <DependentUpon>201803151408163_modelchange3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803161649447_ActTypeAdded.cs" />
+    <Compile Include="Migrations\201803161649447_ActTypeAdded.Designer.cs">
+      <DependentUpon>201803161649447_ActTypeAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803161654071_ActTypeAdded1.cs" />
+    <Compile Include="Migrations\201803161654071_ActTypeAdded1.Designer.cs">
+      <DependentUpon>201803161654071_ActTypeAdded1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803161734120_ActTypeAdded2.cs" />
+    <Compile Include="Migrations\201803161734120_ActTypeAdded2.Designer.cs">
+      <DependentUpon>201803161734120_ActTypeAdded2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803161742533_ActTypeAdded3.cs" />
+    <Compile Include="Migrations\201803161742533_ActTypeAdded3.Designer.cs">
+      <DependentUpon>201803161742533_ActTypeAdded3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803171109135_modelchange4.cs" />
+    <Compile Include="Migrations\201803171109135_modelchange4.Designer.cs">
+      <DependentUpon>201803171109135_modelchange4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803181700481_modelchange5.cs" />
+    <Compile Include="Migrations\201803181700481_modelchange5.Designer.cs">
+      <DependentUpon>201803181700481_modelchange5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803190907124_modelchange6.cs" />
+    <Compile Include="Migrations\201803190907124_modelchange6.Designer.cs">
+      <DependentUpon>201803190907124_modelchange6.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\ActBase.cs" />
@@ -149,6 +173,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803151408163_modelchange3.resx">
       <DependentUpon>201803151408163_modelchange3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803161649447_ActTypeAdded.resx">
+      <DependentUpon>201803161649447_ActTypeAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803161654071_ActTypeAdded1.resx">
+      <DependentUpon>201803161654071_ActTypeAdded1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803161734120_ActTypeAdded2.resx">
+      <DependentUpon>201803161734120_ActTypeAdded2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803161742533_ActTypeAdded3.resx">
+      <DependentUpon>201803161742533_ActTypeAdded3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803171109135_modelchange4.resx">
+      <DependentUpon>201803171109135_modelchange4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803181700481_modelchange5.resx">
+      <DependentUpon>201803181700481_modelchange5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803190907124_modelchange6.resx">
+      <DependentUpon>201803190907124_modelchange6.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

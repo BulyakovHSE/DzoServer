@@ -9,6 +9,8 @@ namespace ActsModel.Model
     [DataContract]
     public class ActInspection : ActCommon
     {
+        public ActInspection():base(ActType.АктОбследования){}
+
         /// <summary>
         /// Наименование территориального органа администрации Перми, уполномоченного 
         /// на осуществеление муницип. зем. контроля

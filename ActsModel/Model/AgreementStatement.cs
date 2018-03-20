@@ -9,6 +9,8 @@ namespace ActsModel.Model
     [DataContract]
     public class AgreementStatement : ActIndividual
     {
+        public AgreementStatement():base(ActType.ЗаявлениеСоглВнеплВыездПроверки){}
+
         /// <summary>
         /// просим согласия на проведение внеплановой выездной проверки в отношении
         /// (наименование, адрес (место нахождения) постоянно действующего исполнительного органа юридического лица, 

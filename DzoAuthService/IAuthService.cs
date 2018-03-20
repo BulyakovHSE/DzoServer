@@ -5,9 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
-using ActsModel;
-using ActsModel.Model;
-
+using DlrModel.Model;
 namespace DzoAuthService
 {
     [ServiceContract]
@@ -20,46 +18,43 @@ namespace DzoAuthService
         List<ActBase> GetActs(Token token, int count, int offset);
 
         [OperationContract]
-        List<ActBase> GetSomeActs(Token token, Func<ActBase, bool> predicate);
+        List<ActCommon> GetActsCommon(Token token, int count, int offset);
 
         [OperationContract]
-        List<ActCommon> GetActsCommon(Token token, Func<ActCommon, bool> predicate);
+        List<ActIndividual> GetActsIndividual(Token token, int count, int offset);
 
         [OperationContract]
-        List<ActIndividual> GetActsIndividual(Token token, Func<ActIndividual, bool> predicate);
-        
+        List<ActInpectationFl> GetActsInpectationFl(Token token, int count, int offset);
+
         [OperationContract]
-        List<ActInpectationFl> GetActsInpectationFl(Token token, Func<ActInpectationFl, bool> predicate);
-        
+        List<ActInspectationUlIp> GetActsInspectationUlIp(Token token, int count, int offset);
+
         [OperationContract]
-        List<ActInspectationUlIp> GetActsInspectationUlIp(Token token, Func<ActInspectationUlIp, bool> predicate);
-        
+        List<ActInspection> GetActInspection(Token token, int count, int offset);
+
         [OperationContract]
-        List<ActInspection> GetActInspection(Token token, Func<ActInspection, bool> predicate);
-        
+        List<AgreementStatement> GetAgreementStatements(Token token, int count, int offset);
+
         [OperationContract]
-        List<AgreementStatement> GetAgreementStatements(Token token, Func<AgreementStatement, bool> predicate);
-        
+        List<AreaMeasurement> GetAreaMeasurements(Token token, int count, int offset);
+
         [OperationContract]
-        List<AreaMeasurement> GetAreaMeasurements(Token token, Func<AreaMeasurement, bool> predicate);
-        
+        List<CheckingJournal> GetCheckingJournals(Token token, int count, int offset);
+
         [OperationContract]
-        List<CheckingJournal> GetCheckingJournals(Token token, Func<CheckingJournal, bool> predicate);
-        
+        List<CitizensCheckPlan> GetCitizensCheckPlans(Token token, int count, int offset);
+
         [OperationContract]
-        List<CitizensCheckPlan> GetCitizensCheckPlans(Token token, Func<CitizensCheckPlan, bool> predicate);
-        
+        List<OrderInspectionUlIp> GetOrdersInspectionUlIp(Token token, int count, int offset);
+
         [OperationContract]
-        List<OrderInspectionUlIp> GetOrdersInspectionUlIp(Token token, Func<OrderInspectionUlIp, bool> predicate);
-        
+        List<PhotoTable> GetPhotoTables(Token token, int count, int offset);
+
         [OperationContract]
-        List<PhotoTable> GetPhotoTables(Token token, Func<PhotoTable, bool> predicate);
-        
+        List<Protocol> GetProtocols(Token token, int count, int offset);
+
         [OperationContract]
-        List<Protocol> GetProtocols(Token token, Func<Protocol, bool> predicate);
-        
-        [OperationContract]
-        List<Regulation> GetRegulations(Token token, Func<Regulation, bool> predicate);
+        List<Regulation> GetRegulations(Token token, int count, int offset);
 
         [OperationContract]
         List<Photo> GetPhotoTablePhotos(Token token, PhotoTable photoTable);

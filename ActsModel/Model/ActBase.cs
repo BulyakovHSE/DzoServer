@@ -8,6 +8,16 @@ namespace ActsModel.Model
     [DataContract]
     public class ActBase
     {
+        public ActBase(ActType actType = ActType.Базовый)
+        {
+            ActType = actType;
+        }
+
+        public ActBase()
+        {
+            ActType = ActType.Базовый;
+        }
+
         [DataMember]
         [Key]
         public int Id { get; set; }
@@ -24,5 +34,8 @@ namespace ActsModel.Model
         
         [DataMember]
         public byte[] DocumentBytes { get; set; }
+
+        [DataMember]
+        public ActType ActType { get; set; }
     }
 }

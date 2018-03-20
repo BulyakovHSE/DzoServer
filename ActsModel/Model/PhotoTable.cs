@@ -10,6 +10,8 @@ namespace ActsModel.Model
     [DataContract]
     public class PhotoTable : ActCommon
     {
+        public PhotoTable():base( ActType.ФотоТаблица){}
+
         /// <summary>
         /// наименование органа муниципального земельного контроля
         /// </summary>

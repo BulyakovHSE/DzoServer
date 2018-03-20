@@ -11,6 +11,9 @@ namespace ActsModel.Model
     [DataContract]
     public class ActCommon : ActBase
     {
+        public ActCommon(ActType actType):base(actType){}
+        public ActCommon():base(ActType.Базовый){}
+
         [DataMember]
         public int CommonNum { get; set; }
     }

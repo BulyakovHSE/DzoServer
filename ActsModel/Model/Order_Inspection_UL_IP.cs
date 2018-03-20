@@ -9,6 +9,8 @@ namespace ActsModel.Model
     [DataContract]
     public class OrderInspectionUlIp : ActIndividual
     {
+        public OrderInspectionUlIp():base(ActType.РаспоряжениеПроверкиЮл){}
+
         /// <summary>
         /// Наименование территориального органа администрации Перми, уполномоченного 
         /// на осуществеление муницип. зем. ко
@@ -23,8 +25,18 @@ namespace ActsModel.Model
         [DataMember]
         public string CheckType { get; set; }
 
-        // от 
-        // от “___” _____  _____ г.
+        /// <summary>
+        /// от 
+        /// (от “___” _____ _____ г.)
+        /// </summary>
+        [DataMember]
+        public DateTime? OrderDate { get; set; }
+
+        /// <summary>
+        /// (должность, фамилия, инициалы руководителя, заместителя руководителя органа государственного контроля (надзора), органа муниципального контроля, издавшего распоряжение или приказ о проведении проверки)
+        /// </summary>
+        [DataMember]
+        public string OrderCreatorMakerInfo { get; set; }
 
         /// <summary>
         /// Номер приказа
@@ -91,13 +103,13 @@ namespace ActsModel.Model
         /// К проведению проверки приступить с “__” ______ 20__ года.
         /// </summary>
         [DataMember]
-        public DateTime? CheckingTimeStart { get; set; }
+        public DateTime? CheckingDateStart { get; set; }
 
         /// <summary>
         /// Проверку окончить не позднее “__” ______ 20__ года.
         /// </summary>
         [DataMember]
-        public DateTime? CheckingTimeFinish { get; set; }
+        public DateTime? CheckingDateFinish { get; set; }
 
         /// <summary>
         /// Правовые основания проведения проверки: ссылка на положения нормативного правового акта, в соответствии с которым осуществляется проверка

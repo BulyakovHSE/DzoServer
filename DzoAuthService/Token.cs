@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using ActsModel;
+//using ActsModel;
+using DlrModel;
+using DlrModel.Model;
 using Newtonsoft.Json;
 
 namespace DzoAuthService

@@ -9,12 +9,19 @@ namespace ActsModel.Model
     [DataContract]
     public class Protocol : ActIndividual
     {
+        public Protocol():base(ActType.ПротоколАдмПравонарушения){}
+
         /// <summary>
         /// "___" ____________ 20___ г. 
-        ///"___" час. "___" мин.
         /// </summary>
         [DataMember]
         public DateTime? Date { get; set; }
+
+        /// <summary>
+        ///"___" час. "___" мин.
+        /// </summary>
+        [DataMember]
+        public DateTime? Time { get; set; }
 
         /// <summary>
         /// N ____________

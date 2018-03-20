@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
 
 namespace ActsModel.Model
@@ -9,6 +10,8 @@ namespace ActsModel.Model
     [DataContract]
     public class ActInpectationFl : ActCommon
     {
+        public ActInpectationFl() : base(ActType.АктПроверкиФизЛица){}
+
         /// <summary>
         /// Номер акта
         /// </summary>
@@ -21,7 +24,14 @@ namespace ActsModel.Model
         /// “__”	____ 20__г
         /// </summary>
         [DataMember]
-        public DateTime? DateTimeCreation { get; set; }
+        public DateTime? DateOfCreation { get; set; }
+
+        /// <summary>
+        /// Дата составления акта
+        /// “__”	____ 20__г
+        /// </summary>
+        [DataMember]
+        public DateTime? TimeOfCreation { get; set; }
 
         /// <summary>
         /// Место составления

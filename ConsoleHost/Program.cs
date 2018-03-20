@@ -4,7 +4,9 @@ using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
-using ActsModel;
+using DlrModel;
+//using ActsModel;
+using DlrModel.Model;
 using DzoAuthService;
 
 namespace ConsoleHost

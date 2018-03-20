@@ -10,6 +10,8 @@ namespace ActsModel.Model
     [DataContract]
     public class CheckingJournal : ActIndividual
     {
+        public CheckingJournal():base(ActType.ЖурналУчетаПроверокЮл){}
+
         /// <summary>
         ///  дата начала ведения журнала
         /// </summary>
@@ -58,32 +60,32 @@ namespace ActsModel.Model
         ///  Дата начала и окончания проверки
         /// </summary>
         [DataMember]
-        public string CheckDateStartAndFinish { get; set; }
+        public string CheckDateStartAndFinishNoUnderline { get; set; }
 
         /// <summary>
         /// Общее время проведения проверки 
         /// (в отношении субъектов малого предпринимательства и микропредприятий указывается в часах)
         /// </summary>
         [DataMember]
-        public string CommonCheckDuration { get; set; }
+        public string CommonCheckDurationNoUnderline { get; set; }
 
         /// <summary>
         /// Наименование органа государственного контроля (надзора), наименование органа муниципального контроля
         /// </summary>
         [DataMember]
-        public string StateControlName { get; set; }
+        public string StateControlNameNoUnderline { get; set; }
 
         /// <summary>
         /// Дата и номер распоряжения или приказа о проведении проверки
         /// </summary>
         [DataMember]
-        public string DateNumOrOrderOfCheck { get; set; }
+        public string DateNumOrOrderOfCheckNoUnderline { get; set; }
 
         /// <summary>
         /// Цель, задачи и предмет проверки
         /// </summary>
         [DataMember]
-        public string CheckAimTaskAndObject { get; set; }
+        public string CheckAimTaskAndObjectNoUnderline { get; set; }
 
         /// <summary>
         /// Вид проверки (плановая или внеплановая):
@@ -93,14 +95,14 @@ namespace ActsModel.Model
         /// – с указанием на дату и номер решения прокурора о согласовании проведения проверки(в случае, если такое согласование необходимо)
         /// </summary>
         [DataMember]
-        public string CheckType { get; set; }
+        public string CheckTypeNoUnderline { get; set; }
 
         /// <summary>
         /// Дата и номер акта, составленного по результатам проверки, 
         /// дата его вручения представителю юридического лица, индивидуальному предпринимателю
         /// </summary>
         [DataMember]
-        public string DateNumOfCheckRes { get; set; }
+        public string DateNumOfCheckResNoUnderline { get; set; }
 
         /// <summary>
         /// Выявленные нарушения обязательных требований 
@@ -108,18 +110,24 @@ namespace ActsModel.Model
         /// которым установлено нарушенное требование, допустившее его лицо)
         /// </summary>
         [DataMember]
-        public string FoundViolations { get; set; }
+        public string FoundViolationsNoUnderline { get; set; }
 
         /// <summary>
         /// Дата, номер и содержание выданного предписания об устранении выявленных нарушений
         /// </summary>
         [DataMember]
-        public string DateNumOfContentOfElimination { get; set; }
+        public string DateNumOfContentOfEliminationNoUnderline { get; set; }
 
         /// <summary>
         /// Фамилия, имя, отчество (в случае, если имеется), должность должностного лица (должностных лиц), проводящего(их) проверку
         /// </summary>
         [DataMember]
-        public string CheckerPersonInfo { get; set; }
+        public string CheckerPersonInfoNoUnderline { get; set; }
+
+        /// <summary>
+        /// Фамилия, имя, отчество (в случае, если имеется), должности экспертов, представителей экспертных организаций, привлеченных к проведению проверки
+        /// </summary>
+        [DataMember]
+        public string ExpertsInfoNoUnderline {get;set;}
     }
 }
